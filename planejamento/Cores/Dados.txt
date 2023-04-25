@@ -1,0 +1,7 @@
+Azul: #0144b5
+
+Vermelho: #e00109
+
+Amarelo: #ffd100
+
+Cinza miolo: #e5e6e7

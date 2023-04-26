@@ -1,0 +1,20 @@
+header div.mobile button {
+}
+
+@media screen and (max-width: 768px) {
+  /* HEADER */
+  header {
+    position: fixed;
+  }
+
+  header div.default {
+    display: none;
+  }
+
+  header div.mobile {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* HAMBURGER */
+}

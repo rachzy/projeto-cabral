@@ -1,8 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import Header from "./components/Header";
+
 const App = () => {
   return (
-    <div>
-      <h1>Projeto Cabral</h1>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route index element={<Index />} />
+      </Routes>
+    </Router>
   );
 };
 

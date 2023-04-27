@@ -33,7 +33,7 @@ div.social-media ul {
 }
 
 div.social-media ul li {
-  width: 6vh;
+  width: 4vh;
   margin-inline: 1vh;
   list-style: none;
 }
@@ -52,8 +52,8 @@ header div.menu {
   flex-grow: 1;
   background-color: #ffd100;
 
-  padding: 2vh 3vh;
-  padding-bottom: 3vh;
+  padding: 1vh 2vh;
+  padding-bottom: 2vh;
 }
 
 /* WRAPPER-LOGO */
@@ -67,13 +67,13 @@ header div.menu {
 }
 
 .wrapper-logo img {
-  width: 150px;
+  width: 20vh;
 }
 
 /* WRAPPER-MENU */
 
 .wrapper-menu {
-  flex: 3;
+  flex: 2;
 }
 
 .wrapper-menu ul {
@@ -90,7 +90,7 @@ header div.menu {
   font-family: "OmnesBoldRoman";
 
   transition: 0.2s all;
-  font-size: 2.7vmin;
+  font-size: 2.5vmin;
 }
 
 .wrapper-menu a:hover {
@@ -109,7 +109,7 @@ div.underline {
 
   margin-top: 1vh;
 
-  background-color: rgb(179, 95, 0);
+  background-color: rgb(255, 81, 0);
 
   border-radius: 5vh;
   transition: 0.6s all;

@@ -1,3 +1,24 @@
+main {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+}
+
+section.main {
+    width: 100%;
+}
+
 div.inline-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +31,6 @@ div.inline-wrapper {
 
 @media screen and (min-width: 920px) {
     div.inline-wrapper {
-        margin-top: -20vh;
+        margin-top: -15%;
     }
 }

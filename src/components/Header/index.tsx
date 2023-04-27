@@ -68,7 +68,9 @@ const DefaultSection: React.FC<IPropsSections> = ({
           <img src={Logo} alt="logo rede cabral" />
         </div>
         <div className="wrapper-menu">
-          <ul>{renderOptions()}</ul>
+          <nav>
+            <ul>{renderOptions()}</ul>
+          </nav>
         </div>
       </div>
     </div>
@@ -120,7 +122,9 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
       <div className="mobile-background" ref={menuRef}>
         <div className="mobile-menu">
           <img src={Logo} alt="logo rede cabral" />
-          <ul className="options">{renderOptions()}</ul>
+          <nav className="options">
+            <ul>{renderOptions()}</ul>
+          </nav>
           <ul className="social-medias">{renderSocialMedias()}</ul>
         </div>
       </div>

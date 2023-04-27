@@ -1,25 +1,38 @@
-import React from "react";
+import React, { MutableRefObject, useRef } from "react";
 
 import "./Hamburguer.css";
 
-const Hamburguer = () => {
-  function handleButtonClick(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    const btn = e.target as HTMLButtonElement;
-    btn.classList.toggle("opened");
-    btn.setAttribute(
+interface IProps {
+  id?: string;
+  onClick?: () => void;
+}
+
+const Hamburguer: React.FC<IProps> = ({ id, onClick }) => {
+  const btn = useRef() as MutableRefObject<HTMLButtonElement>;
+
+  function handleButtonClick() {
+    if (!btn || !btn.current) return;
+
+    btn.current.classList.toggle("opened");
+
+    btn.current.setAttribute(
       "aria-expanded",
-      btn.classList.contains("opened").toString()
+      btn.current.classList.contains("opened").toString()
     );
+
+    if (!onClick) return;
+    onClick();
   }
+
   return (
     <button
+      id={id}
       className="hamburguer menu"
       onClick={handleButtonClick}
       aria-label="Main Menu"
+      ref={btn}
     >
-      <svg width="100" height="100" viewBox="0 0 100 100">
+      <svg viewBox="0 0 100 100">
         <path
           className="line line1"
           d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"

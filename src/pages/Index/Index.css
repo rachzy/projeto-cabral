@@ -1,0 +1,15 @@
+div.inline-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 920px) {
+    div.inline-wrapper {
+        margin-top: -20vh;
+    }
+}

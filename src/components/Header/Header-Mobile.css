@@ -12,6 +12,8 @@ header .mobile-background {
 
   opacity: 0%;
   transition: 0.3s all;
+
+  z-index: -99;
 }
 
 header .mobile-background.active {
@@ -28,15 +30,19 @@ header .mobile-menu {
   display: flex;
   flex-direction: column;
 
-  min-width: 50vw;
-  max-width: 70%;
-
   justify-content: space-evenly;
   align-items: center;
 
   padding-block: 5vh 20vh;
 
+  width: 0%;
+
   background-color: #ffd100;
+}
+
+header .mobile-background.active .mobile-menu {
+  min-width: 50vw;
+  max-width: 70%;
 }
 
 header .mobile-menu ul.options {

@@ -13,8 +13,10 @@ const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
   return (
     <main>
-      <section>
+      <section className="main">
         <Slider images={sliderImages} />
+      </section>
+      <section>
         <div className="inline-wrapper">
           <InfoBox
             title="Missão"
@@ -42,7 +44,7 @@ const Index = () => {
             color="#e00109"
           />
           <InfoBox
-            title="Missão"
+            title="Valores"
             description="
             • Honestidade; <br />
             • Ética; <br />
@@ -53,6 +55,24 @@ const Index = () => {
             color="#ffd100"
             style={{ color: "#0144b5" }}
           />
+        </div>
+        <div className="about-box">
+          <div>
+            <h2>:. Forma de Trabalhar</h2>
+            <p>
+              • Valorizar os nossos colaboradores; <br />
+              • Executar as tarefas através de processos; <br />
+              • Proteger o meio ambiente; <br />
+              • Fazer tudo do jeito certo; <br /> • Praticar novas ideias.
+            </p>
+          </div>
+          <div>
+            <h2>:. Cultura Organizacional</h2>
+            <p>
+              Liberdade, responsabilidade e atingimento das metas para uma
+              operação eficiente.
+            </p>
+          </div>
         </div>
       </section>
     </main>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Slider.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -46,6 +46,10 @@ const Slider: React.FC<IProps> = ({ images }) => {
       );
     });
   }
+
+  useEffect(() => {
+    setInterval(handleNextSlideButtonClick, 5000);
+  }, []);
 
   return (
     <div className="slider">

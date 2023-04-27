@@ -9,14 +9,13 @@ div.info-box {
 
     border-radius: 2vh;
     
-    -webkit-filter: drop-shadow(1vw 0px 0px black); /* Chrome, Safari, Opera */
-    filter: drop-shadow(-1vw 5vh 1vw rgba(0, 0, 0, 0.384));
+    -webkit-filter: drop-shadow(-1vw 2vh 1vw rgba(0, 0, 0, 0.384)); /* Chrome, Safari, Opera */
+    filter: drop-shadow(-1vw 2vh 1vw rgba(0, 0, 0, 0.384));
 
     color: white;
 }
 
 div.info-box h2 {
-    font-size: 3vh;
     margin-bottom: 3vh;
 }
 

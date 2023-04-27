@@ -17,8 +17,31 @@ ul {
 
 h2 {
   font-family: "OmnesBoldRoman", sans-serif;
+  font-size: 3vh;
 }
 
 p {
   font-family: "OmnesLight", sans-serif;
+  font-size: 2.3vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+}
+
+section.main {
+  width: 100%;
 }

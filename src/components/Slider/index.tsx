@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Slider.css";
 
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import SliderRight from "../../assets/images/buttons/slider-right.png";
+import SliderLeft from "../../assets/images/buttons/slider-left.png";
 
 interface IProps {
   images: string[];
+  floatingDots?: boolean;
 }
 
-const Slider: React.FC<IProps> = ({ images }) => {
+const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleNextSlideButtonClick() {
@@ -27,11 +29,12 @@ const Slider: React.FC<IProps> = ({ images }) => {
   function renderImages() {
     return images.map((image, index) => {
       return (
-        <img
+        <div
           key={image}
-          src={image}
           className={`slide ${index === currentSlide && "active"}`}
-        />
+        >
+          <img src={image} />
+        </div>
       );
     });
   }
@@ -52,18 +55,22 @@ const Slider: React.FC<IProps> = ({ images }) => {
   }, []);
 
   return (
-    <div className="slider">
-      <div className="buttons">
-        <button onClick={handlePreviousSlideButtonClick}>
-          <FaChevronLeft />
-        </button>
-        <button onClick={handleNextSlideButtonClick}>
-          <FaChevronRight />
-        </button>
+    <>
+      <div className="slider">
+        <div className="buttons">
+          <button onClick={handlePreviousSlideButtonClick}>
+            <img src={SliderLeft} />
+          </button>
+          <button onClick={handleNextSlideButtonClick}>
+            <img src={SliderRight} />
+          </button>
+        </div>
+        {floatingDots && <div className="dots float">{renderDots()}</div>}
+
+        <div className="slides">{renderImages()}</div>
       </div>
-      <div className="dots">{renderDots()}</div>
-      <div className="slides">{renderImages()}</div>
-    </div>
+      {!floatingDots && <div className="dots">{renderDots()}</div>}
+    </>
   );
 };
 

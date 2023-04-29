@@ -1,105 +1,124 @@
 div.slider {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
+  width: 100%;
 }
 
 div.slides {
-    display: flex;
+  display: flex;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-img.slide {
-    width: 100%;
+div.slide {
+  width: 100%;
+  max-height: 100vh;
 
-    opacity: 0%;
+  opacity: 0%;
 
-    transition: 0.2s all;
-    position: absolute;
-
+  transition: 0.2s all;
+  position: absolute;
 }
 
-img.slide.active {
-    position: static;
-    opacity: 100%;
+div.slide.active {
+  position: static;
+  opacity: 100%;
+}
+
+div.slide img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 
 /* BUTTONS */
 
 div.slider div.buttons {
-    display: flex;
+  display: flex;
 
-    width: 80%;
-    justify-content: space-between;
+  width: 80%;
+  justify-content: space-between;
 
-    position: absolute;
-    z-index: 99;
+  position: absolute;
+  z-index: 999;
 }
 
 div.slider div.buttons button {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    background-color: #0144b5;
+  background: none;
 
-    color: white;
-    padding: 1.5vh;
-    border-radius: 50%;
-    outline: none;
-    border: none;
+  width: fit-content;
+  height: fit-content;
 
-    font-size: 2vw;
-    font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  outline: none;
+  border: none;
 
-    cursor: pointer;
-    transition: 0.2s all;
+  font-size: 2vw;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+div.slider div.buttons button img {
+  width: 8vh;
 }
 
 div.slider div.buttons button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* DOTS */
 
-div.slider div.dots {
-    display: flex;
+div.dots {
+  display: flex;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
+  width: 100%;
 
-    position: absolute;
-    z-index: 99;
+  z-index: 99;
 
-    align-self: flex-end;
-    padding-bottom: 3vh;
+  margin-block: 3vh;
+
+  align-self: flex-end;
+  padding-bottom: 3vh;
+}
+
+div.dots.float {
+  margin-block: 0;
+  position: absolute;
 }
 
 @media screen and (min-width: 920px) {
-    div.slider div.dots {
-        padding-bottom: 15vw;
-    }
+  div.dots.float {
+    padding-bottom: 15vw;
+  }
 }
 
 div.dots div.dot {
-    width: 1.5vh;
-    height: 1.5vh;
+  width: 1.5vh;
+  height: 1.5vh;
 
-    margin-inline: 0.5vh;
+  margin-inline: 0.5vh;
 
-    background-color: white;
+  background-color: white;
 
-    border-radius: 50%;
+  border: 1px solid #0144b5;
+  border-radius: 50%;
 }
 
 div.dots div.dot.active {
-    background-color: #0144b5;
+  background-color: #0144b5;
 }

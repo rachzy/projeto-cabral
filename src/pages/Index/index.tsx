@@ -7,16 +7,87 @@ import sliderBanner from "../../assets/images/sliders/capa.jpg";
 import slide1 from "../../assets/images/sliders/inicial-1.jpg";
 import slide2 from "../../assets/images/sliders/inicial-2.jpg";
 import slide3 from "../../assets/images/sliders/inicial-3.jpg";
+
+import HotelIcon from "../../assets/images/icons/timeline/ic-hotel.png";
+import MotelIcon from "../../assets/images/icons/timeline/ic-motel.png";
+import GasIcon from "../../assets/images/icons/timeline/ic-posto.png";
+import PeopleIcon from "../../assets/images/icons/timeline/ic-filhos.png";
+import EngineerIcon from "../../assets/images/icons/timeline/ic-construtora.png";
+
+import GasStationBuilding from "../../assets/images/other/building-posto-cabral.png";
+
 import InfoBox from "../../components/InfoBox/index";
+
+import Timeline, { ITimeline } from "../../components/Timeline";
 
 const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
+  const timeline: ITimeline[] = [
+    {
+      year: 1995,
+      description: `Com muito trabalho, honestidade e persistência,
+      conseguiram iniciar o seu primeiro negócio: <br />
+      <span class="bold">o Hotel Izzi.</span>`,
+      icon: HotelIcon,
+      height: 12,
+    },
+    {
+      year: 2002,
+      description: `Construção de mais um empreendimento, o
+      <span class="bold">Motel Roma.</span>`,
+      icon: MotelIcon,
+      height: 12,
+    },
+    {
+      year: 2009,
+      description: `Sempre trabalhando com inteligência e consistência,
+      em <span class="bold">12 anos de obra</span>, conseguiram inaugurar o
+      primeiro posto de combustíveis, o <span class="bold">Posto Cabral Rodovia</span>.
+      `,
+      icon: GasIcon,
+      height: 42,
+      image: GasStationBuilding,
+    },
+    {
+      year: 2009,
+      description: `De 2009 pra cá, os filhos, <span class="bold">Ivo e Iolando Filho</span>,
+      assumiram a <span class="bold">administração dos negócios</span>.
+      `,
+      icon: PeopleIcon,
+      height: 12,
+    },
+    {
+      year: 2012,
+      description: `Inauguração do <span class="bold">Posto Cabralzinho</span>.`,
+      icon: GasIcon,
+      height: 12,
+    },
+    {
+      year: 2015,
+      description: `Inauguração da <span class="bold">CBR Empreendimentos</span>.`,
+      icon: EngineerIcon,
+      height: 12,
+    },
+    {
+      year: 2021,
+      description: `Inauguração da <span class="bold">Fazenda do Vale - Hotel & Eventos.</span>`,
+      icon: HotelIcon,
+      height: 12,
+    },
+    {
+      year: 2022,
+      description: `Inauguração da <span class="bold">Posto Cabral 3.</span>`,
+      icon: GasIcon,
+      height: 12,
+    },
+  ];
+
   return (
     <main>
       <section className="main">
         <Slider images={sliderImages} />
       </section>
-      <section>
+      <section className="center-content">
         <div className="inline-wrapper">
           <InfoBox
             title="Missão"
@@ -74,6 +145,10 @@ const Index = () => {
             </p>
           </div>
         </div>
+      </section>
+      <section>
+        <h2 className="subtitle">:. Um pouco sobre nós</h2>
+        <Timeline timeline={timeline} />
       </section>
     </main>
   );

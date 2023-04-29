@@ -1,0 +1,110 @@
+.timeline-wrapper {
+  display: flex;
+
+  width: 100%;
+  margin-top: 8vh;
+}
+
+.timeline-wrapper .main-text {
+  display: flex;
+  flex-direction: column;
+
+  flex: 2;
+}
+
+.timeline-wrapper .main-text h1 {
+  margin-bottom: 4vh;
+}
+
+.timeline-wrapper .sections {
+  display: flex;
+  flex: 4;
+}
+
+.timeline-wrapper .icons {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 21vh;
+
+  flex: 1;
+}
+
+.timeline-wrapper .icons img {
+  width: 15vh;
+  align-self: flex-end;
+}
+
+.timeline-wrapper .years {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  max-width: fit-content;
+}
+
+.timeline-wrapper .year {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 12vh;
+  height: 12vh;
+
+  background-color: #0144b5;
+  border-radius: 50%;
+}
+
+.timeline-wrapper .year.small {
+  width: 3vh;
+  height: 3vh;
+}
+
+.timeline-wrapper .year p {
+  color: white;
+  font-family: "OmnesBoldRoman", sans-serif;
+  font-size: 3.5vh;
+}
+
+.timeline-wrapper .line {
+  background-color: #0144b5;
+  width: 0.5vh;
+}
+
+.timeline-wrapper .line.first {
+  height: 18vh;
+}
+
+.timeline-wrapper .descriptions {
+  display: flex;
+  flex-direction: column;
+
+  flex: 3;
+}
+
+.timeline-wrapper .description {
+  padding-inline: 5vh;
+  overflow: hidden;
+}
+
+.timeline-wrapper .description.first {
+  height: 5vh;
+  overflow: visible;
+  margin-bottom: 18vh;
+}
+
+.timeline-wrapper .description img {
+  width: 100%;
+}
+
+.timeline-wrapper .description .line {
+  width: 10vh;
+  height: 0.5vh;
+
+  border-radius: 8vh;
+  background-color: #acacac;
+
+  margin-block: 1vh;
+}

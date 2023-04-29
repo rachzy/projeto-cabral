@@ -1,0 +1,9 @@
+@media screen and (max-width: 920px) {
+  .timeline-wrapper {
+    flex-direction: column;
+  }
+
+  .timeline-wrapper .sections {
+    margin-top: 5vh;
+  }
+}

@@ -14,11 +14,20 @@ import GasIcon from "../../assets/images/icons/timeline/ic-posto.png";
 import PeopleIcon from "../../assets/images/icons/timeline/ic-filhos.png";
 import EngineerIcon from "../../assets/images/icons/timeline/ic-construtora.png";
 
+import CabralRodovia from "../../assets/images/logos/posto-cabral-rodovia.png";
+import Cabralzinho from "../../assets/images/logos/posto-cabralzinho.png";
+import Cabral3 from "../../assets/images/logos/posto-cabral-3.png";
+import FazendaVale from "../../assets/images/logos/fazenda-do-vale.png";
+import IzziHoteis from "../../assets/images/logos/izzi-hoteis.png";
+import MotelRoma from "../../assets/images/logos/motel-roma.png";
+import Cbr from "../../assets/images/logos/cbr.png";
+
 import GasStationBuilding from "../../assets/images/other/building-posto-cabral.png";
 
 import InfoBox from "../../components/InfoBox/index";
 
 import Timeline, { ITimeline } from "../../components/Timeline";
+import LineTitle from "../../components/LineTitle";
 
 const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
@@ -81,11 +90,20 @@ const Index = () => {
       height: 12,
     },
   ];
+  const companiesImages = [
+    CabralRodovia,
+    Cabralzinho,
+    Cabral3,
+    FazendaVale,
+    IzziHoteis,
+    MotelRoma,
+    Cbr,
+  ];
 
   return (
     <main>
       <section className="main">
-        <Slider images={sliderImages} />
+        <Slider images={sliderImages} floatingDots={true} />
       </section>
       <section className="center-content">
         <div className="inline-wrapper">
@@ -149,6 +167,12 @@ const Index = () => {
       <section>
         <h2 className="subtitle">:. Um pouco sobre nós</h2>
         <Timeline timeline={timeline} />
+      </section>
+      <section className="main">
+        <LineTitle>Empresas do grupo:</LineTitle>
+      </section>
+      <section>
+        <Slider images={companiesImages} />
       </section>
     </main>
   );

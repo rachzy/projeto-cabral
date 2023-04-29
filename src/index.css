@@ -7,6 +7,10 @@
   font-family: "Omnes Regular Roman", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }

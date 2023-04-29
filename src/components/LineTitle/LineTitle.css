@@ -1,0 +1,22 @@
+div.line-title {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-block: 5vh;
+}
+
+div.line-title .line {
+  flex: 1;
+  height: 0.5vh;
+
+  border-radius: 5vh;
+
+  background-color: #acacac;
+}
+
+div.line-title p {
+  margin-inline: 5vh;
+  text-align: center;
+}

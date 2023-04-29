@@ -78,6 +78,7 @@ const Timeline: React.FC<ITimelineProps> = ({ timeline }) => {
           <div className="year small" />
           <div className="line first" />
           {renderYears()}
+          <div className="year small" />
         </div>
         <div className="descriptions">
           <div className="description first">

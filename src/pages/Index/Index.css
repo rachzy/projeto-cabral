@@ -52,3 +52,37 @@ div.about-box h2 {
   color: rgb(95, 95, 95);
   margin-bottom: 2vh;
 }
+
+/* BLUE BANNER   */
+
+div.blue-banner {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  padding: 5vh 12vh;
+
+  flex: 1;
+  width: 50%;
+}
+
+div.blue-banner h1 {
+  font-size: 6vh;
+  margin-top: -3vh;
+}
+
+div.blue-banner h1.yellow-quote {
+  font-size: 12vh;
+  color: #ffd100;
+  font-family: "Times New Roman',Times, 'Nimbus Roman No9 L', 'Liberation Serif', serif, georgia";
+  font-weight: bold;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  div.blue-banner {
+    width: 100%;
+    padding: 0;
+    padding-block: 5vh;
+  }
+}

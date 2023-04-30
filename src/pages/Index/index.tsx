@@ -24,8 +24,10 @@ import Cbr from "../../assets/images/logos/cbr.png";
 
 import GasStationBuilding from "../../assets/images/other/building-posto-cabral.png";
 
-import InfoBox from "../../components/InfoBox/index";
+import BlueBanner from "../../assets/images/other/frase-miolo.jpg";
 
+import InfoBox from "../../components/InfoBox/index";
+import ImageBackground from "../../components/ImageBackground";
 import Timeline, { ITimeline } from "../../components/Timeline";
 import LineTitle from "../../components/LineTitle";
 
@@ -102,7 +104,7 @@ const Index = () => {
 
   return (
     <main>
-      <section className="main">
+      <section className="full">
         <Slider images={sliderImages} floatingDots={true} />
       </section>
       <section className="center-content">
@@ -168,11 +170,21 @@ const Index = () => {
         <h2 className="subtitle">:. Um pouco sobre nós</h2>
         <Timeline timeline={timeline} />
       </section>
-      <section className="main">
+      <section className="full">
         <LineTitle>Empresas do grupo:</LineTitle>
-      </section>
-      <section>
         <Slider images={companiesImages} />
+      </section>
+      <section className="full">
+        <ImageBackground image={BlueBanner}>
+          <div className="blue-banner">
+            <h1 className="yellow-quote">“</h1>
+            <h1 style={{ color: "white" }}>
+              A nossa história e o nosso jeito de ser são marcados por sonhos
+              que nos trouxeram até aqui e que nos enchem de orgulho!
+            </h1>
+            <h1 className="yellow-quote">”</h1>
+          </div>
+        </ImageBackground>
       </section>
     </main>
   );

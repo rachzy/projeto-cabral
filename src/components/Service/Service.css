@@ -8,6 +8,9 @@ div.service {
   width: 25vh;
   height: 25vh;
 
+  margin-right: 6vh;
+  margin-block: 6vh;
+
   padding: 4vh;
   border-radius: 2vh;
 
@@ -24,4 +27,10 @@ div.service p {
   font-family: "OmnesBoldRoman", sans-serif;
   text-align: center;
   font-size: 3vh;
+}
+
+@media screen and (max-width: 400px) {
+  div.service {
+    margin-right: 0;
+  }
 }

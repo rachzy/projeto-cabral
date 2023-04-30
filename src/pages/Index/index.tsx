@@ -44,7 +44,13 @@ import EstacionamentoIcon from "../../assets/images/icons/services/estacionament
 import LazerIcon from "../../assets/images/icons/services/lazer.png";
 import EventosIcon from "../../assets/images/icons/services/lazer.png";
 import ConstrutoraIcon from "../../assets/images/icons/services/construtora.png";
+
+import WhatsappIcon from "../../assets/images/buttons/whatsapp-footer.png";
+import EmailIcon from "../../assets/images/buttons/e-mail-footer.png";
+
 import Services from "../../sections/Services";
+import { IContact } from "../../components/ContactBox";
+import Contact from "../../sections/Contact";
 
 const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
@@ -166,6 +172,16 @@ const Index = () => {
       icon: ConstrutoraIcon,
     },
   ];
+  const contacts: IContact[] = [
+    {
+      label: "(34) 3354-2270",
+      icon: WhatsappIcon,
+    },
+    {
+      label: "contato@redecabral.com.br",
+      icon: EmailIcon,
+    },
+  ];
 
   return (
     <main>
@@ -259,6 +275,7 @@ const Index = () => {
           <Services services={services} />
         </div>
       </section>
+      <Contact contacts={contacts} />
     </main>
   );
 };

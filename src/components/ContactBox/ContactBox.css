@@ -1,0 +1,34 @@
+div.contact-box {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 30vh;
+  height: 30vh;
+
+  margin-right: 6vh;
+  margin-block: 6vh;
+
+  border-radius: 2vh;
+
+  padding: 4vh;
+
+  background-color: #e5e6e7;
+}
+
+div.contact-box img {
+  width: 70%;
+  margin-block: 2vh;
+}
+
+div.contact-box p {
+  font-size: 3vh;
+}
+
+@media screen and (max-width: 580px) {
+  div.contact-box {
+    margin-right: 0;
+  }
+}

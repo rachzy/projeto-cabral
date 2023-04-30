@@ -1,0 +1,39 @@
+footer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0144b5;
+
+  padding-block: 8vh;
+
+  width: 100%;
+}
+
+footer div {
+  margin: 3vh 5vh;
+}
+
+footer div.logo img {
+  width: 30vh;
+}
+
+footer div.credits {
+  display: flex;
+}
+
+footer div.credits p {
+  color: white;
+}
+
+footer div.credits img {
+  width: 14vh;
+  margin-inline: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,31 @@
+button.scroll-btn {
+  position: fixed;
+
+  background: none;
+  border: none;
+
+  width: fit-content;
+  border-radius: 50%;
+
+  cursor: pointer;
+  z-index: 99999;
+
+  bottom: -20vh;
+  right: 0;
+
+  margin: 5vh;
+
+  transition: 0.2s all;
+}
+
+button.scroll-btn.active {
+  bottom: 0;
+}
+
+button.scroll-btn:hover {
+  transform: scale(1.1);
+}
+
+button.scroll-btn img {
+  width: 8vh;
+}

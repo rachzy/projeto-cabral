@@ -1,6 +1,7 @@
 div.info-box {
   width: 38vh;
-  height: 32vh;
+  min-height: 32vh;
+  max-height: fit-content;
 
   z-index: 99;
 

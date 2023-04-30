@@ -30,6 +30,21 @@ import InfoBox from "../../components/InfoBox/index";
 import ImageBackground from "../../components/ImageBackground";
 import Timeline, { ITimeline } from "../../components/Timeline";
 import LineTitle from "../../components/LineTitle";
+import { IService } from "../../components/Service";
+
+import AbastecimentoIcon from "../../assets/images/icons/services/abastecimento.png";
+import AutopecasIcon from "../../assets/images/icons/services/auto-pecas.png";
+import LavajatoIcon from "../../assets/images/icons/services/lavajato.png";
+import BorrachariaIcon from "../../assets/images/icons/services/borracharia.png";
+import AlimentacaoIcon from "../../assets/images/icons/services/alimentacao.png";
+import HotelariaIcon from "../../assets/images/icons/services/hotelaria.png";
+import MotelBlueIcon from "../../assets/images/icons/services/motel.png";
+import ClubeIcon from "../../assets/images/icons/services/clube-de-vantagens.png";
+import EstacionamentoIcon from "../../assets/images/icons/services/estacionamento.png";
+import LazerIcon from "../../assets/images/icons/services/lazer.png";
+import EventosIcon from "../../assets/images/icons/services/lazer.png";
+import ConstrutoraIcon from "../../assets/images/icons/services/construtora.png";
+import Services from "../../sections/Services";
 
 const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
@@ -100,6 +115,56 @@ const Index = () => {
     IzziHoteis,
     MotelRoma,
     Cbr,
+  ];
+  const services: IService[] = [
+    {
+      label: "Abastecimento de Combustíveis",
+      icon: AbastecimentoIcon,
+    },
+    {
+      label: "Auto Peças e Troca de Óleo",
+      icon: AutopecasIcon,
+    },
+    {
+      label: "Lavajato",
+      icon: LavajatoIcon,
+    },
+    {
+      label: "Borracharia",
+      icon: BorrachariaIcon,
+    },
+    {
+      label: "Alimentação",
+      icon: AlimentacaoIcon,
+    },
+    {
+      label: "Hotelaria",
+      icon: HotelariaIcon,
+    },
+    {
+      label: "Motel",
+      icon: MotelBlueIcon,
+    },
+    {
+      label: "Clube de Vantagens",
+      icon: ClubeIcon,
+    },
+    {
+      label: "Estacionamento",
+      icon: EstacionamentoIcon,
+    },
+    {
+      label: "Lazer",
+      icon: LazerIcon,
+    },
+    {
+      label: "Salão para Eventos",
+      icon: EventosIcon,
+    },
+    {
+      label: "Construtora",
+      icon: ConstrutoraIcon,
+    },
   ];
 
   return (
@@ -185,6 +250,14 @@ const Index = () => {
             <h1 className="yellow-quote">”</h1>
           </div>
         </ImageBackground>
+      </section>
+      <section className="full gray">
+        <div className="fake-wrapper">
+          <h2 className="subtitle">
+            :. Serviços oferecidos em nossas empresas
+          </h2>
+          <Services services={services} />
+        </div>
       </section>
     </main>
   );

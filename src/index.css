@@ -41,6 +41,8 @@ h2 {
 
 h2.subtitle {
   color: #0144b5;
+  font-size: 4vh;
+  margin-block: 7vh;
 }
 
 p {
@@ -68,7 +70,31 @@ section.full {
   width: 100%;
 }
 
-section.center-content {
+section.gray {
+  background-color: #e5e6e7;
+  padding-block: 4vh;
+  margin-top: -3vh;
+}
+
+.center-content {
   justify-content: center;
   align-items: center;
+}
+
+div.fake-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+
+  width: 80%;
+}
+
+@media screen and (max-width: 920px) {
+  h2.subtitle {
+    text-align: center;
+  }
+  div.fake-wrapper {
+    width: 95%;
+  }
 }

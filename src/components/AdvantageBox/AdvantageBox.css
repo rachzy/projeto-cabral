@@ -1,0 +1,17 @@
+div.advantage-box {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+
+  margin-inline: 6vh;
+  flex: 1;
+}
+
+div.advantage-box img {
+  width: 20vh;
+}

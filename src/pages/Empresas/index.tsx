@@ -37,12 +37,18 @@ import EmailIcon from "../../assets/images/buttons/e-mail-footer.png";
 
 import BlueBanner from "../../assets/images/other/gasolina-miolo.jpg";
 
+import AbastacimentoVip from "../../assets/images/icons/vip/abastecimento.png";
+import PointsVip from "../../assets/images/icons/vip/pontos.png";
+import GiftVip from "../../assets/images/icons/vip/troque.png";
+import ClubpetroBanner from "../../assets/images/logos/clube-petro-miolo.png";
+
 import Services from "../../sections/Services";
 import Contact from "../../sections/Contact";
 
 import { IService } from "../../components/Service";
 import { IContact } from "../../components/ContactBox";
 import ImageBackground from "../../components/ImageBackground";
+import AdvantageBox, { IAdvantage } from "../../components/AdvantageBox";
 
 const Empresas = () => {
   const services: IService[] = [
@@ -109,6 +115,36 @@ const Empresas = () => {
       icon: EmailIcon,
     },
   ];
+  const advantages: IAdvantage[] = [
+    {
+      title: "Abasteça",
+      description: "nos postos da nossa rede e apresente seu cartãou ou CPF.",
+      icon: AbastacimentoVip,
+    },
+    {
+      title: "Junte pontos",
+      description: "cada vez que você abastecer",
+      icon: PointsVip,
+    },
+    {
+      title:
+        "Troque seus pontos por <span class='yellow'>prêmios exclusivos!</span>",
+      icon: GiftVip,
+    },
+  ];
+
+  function renderAdvantages() {
+    return advantages.map((advantage) => {
+      return (
+        <AdvantageBox
+          key={advantage.icon}
+          title={advantage.title}
+          description={advantage.description}
+          icon={advantage.icon}
+        />
+      );
+    });
+  }
 
   return (
     <main>
@@ -154,13 +190,29 @@ const Empresas = () => {
       </section>
       <section className="full">
         <ImageBackground image={BlueBanner}>
-          <div className="blue-banner">
-            <h1 className="yellow-quote">“</h1>
+          <div className="premios-blue-banner">
             <h1 style={{ color: "white" }}>
-              A nossa história e o nosso jeito de ser são marcados por sonhos
-              que nos trouxeram até aqui e que nos enchem de orgulho!
+              Junte pontos e <span className="yellow">ganhe prêmios!</span>
             </h1>
-            <h1 className="yellow-quote">”</h1>
+            <div className="premios-wrapper">
+              <div className="top">
+                <img src={ClubeVipCabral} alt={"clube vip cabral"} />
+
+                <div className="line" />
+                <div className="advantages">
+                  <div className="advantages-wrapper">{renderAdvantages()}</div>
+                </div>
+              </div>
+              <div className="bottom">
+                <h2>
+                  Solicite o seu <span className="yellow">cartão grátis!</span>
+                </h2>
+                <p>
+                  Baixe o APP <img src={ClubpetroBanner} /> e consulte os seus
+                  pontos.
+                </p>
+              </div>
+            </div>
           </div>
         </ImageBackground>
       </section>

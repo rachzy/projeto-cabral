@@ -22,6 +22,10 @@ header .mobile-background.active {
   opacity: 100%;
 }
 
+header .mobile-background.active a {
+  width: fit-content;
+}
+
 header .hamburguer {
   z-index: 999;
 }
@@ -46,8 +50,6 @@ header .mobile-background.active .mobile-menu {
 }
 
 header .mobile-menu nav.options {
-
-
   width: 100%;
 }
 
@@ -64,6 +66,7 @@ header .mobile-menu a {
   font-family: "OmnesBoldRoman";
 
   font-size: 2.5vh;
+  width: 0;
 }
 
 header .mobile-menu img {

@@ -28,6 +28,10 @@ span.bold {
   font-family: "OmnesBoldRoman", sans-serif;
 }
 
+span.yellow {
+  color: #ffd100;
+}
+
 h1 {
   font-family: "OmnesBoldRoman", sans-serif;
   color: #0144b5;

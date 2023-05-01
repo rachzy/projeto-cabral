@@ -1,5 +1,5 @@
 import React, { MutableRefObject, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Header.css";
 import "./Header-Mobile.css";
@@ -33,6 +33,12 @@ const DefaultSection: React.FC<IPropsSections> = ({
   socialMedias,
   options,
 }) => {
+  const navigate = useNavigate();
+
+  function handleLogoClick() {
+    navigate("/");
+  }
+
   function renderSocialMedias() {
     return socialMedias.map((socialMedia) => {
       return (
@@ -65,7 +71,7 @@ const DefaultSection: React.FC<IPropsSections> = ({
       </div>
       <div className="menu">
         <div className="wrapper-logo">
-          <img src={Logo} alt="logo rede cabral" />
+          <img onClick={handleLogoClick} src={Logo} alt="logo rede cabral" />
         </div>
         <div className="wrapper-menu">
           <nav>

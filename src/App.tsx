@@ -7,7 +7,7 @@ import Empresas from "./pages/Empresas";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={window.location.pathname}>
       <Header />
       <ScrollButton />
       <Routes>

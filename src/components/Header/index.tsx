@@ -180,10 +180,15 @@ const Header = () => {
   ];
 
   return (
-    <header>
-      <DefaultSection options={options} socialMedias={socialMedias} />
-      <MobileSection options={options} socialMedias={socialMedias} />
-    </header>
+    <>
+      <header>
+        <DefaultSection options={options} socialMedias={socialMedias} />
+        <MobileSection options={options} socialMedias={socialMedias} />
+      </header>
+      <div className="fake-header">
+        <img src={Logo} alt="logo rede cabral" />
+      </div>
+    </>
   );
 };
 

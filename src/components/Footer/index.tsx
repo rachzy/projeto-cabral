@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 
 import CabralBanner from "../../assets/images/logos/rede-cabral-header-footer.png";

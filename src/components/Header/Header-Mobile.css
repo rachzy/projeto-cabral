@@ -117,5 +117,22 @@ header .mobile-menu ul.social-medias img {
     justify-content: flex-end;
   }
 
-  /* HAMBURGER */
+  /* FAKE-HEADER */
+  div.fake-header {
+    display: flex;
+
+    align-items: center;
+
+    width: 100vw;
+    background-color: #ffd100;
+
+    padding-block: 1vh;
+
+    margin-bottom: 4vh;
+  }
+
+  div.fake-header img {
+    width: 25vh;
+    margin-left: 5vh;
+  }
 }

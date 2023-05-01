@@ -7,8 +7,10 @@
   font-family: "Omnes Regular Roman", sans-serif;
 }
 
-body {
+body,
+:root {
   overflow-x: hidden;
+  width: 100vw;
 }
 
 a {

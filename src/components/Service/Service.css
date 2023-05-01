@@ -29,7 +29,7 @@ div.service p {
   font-size: 3vh;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
   div.service {
     margin-right: 0;
   }

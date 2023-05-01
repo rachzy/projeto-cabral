@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./ScrollButton.css";
 
 import ScrollUpButton from "../../assets/images/buttons/up-footer.png";

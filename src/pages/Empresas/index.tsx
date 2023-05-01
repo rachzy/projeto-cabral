@@ -1,4 +1,3 @@
-import React from "react";
 import "./Empresas.css";
 
 import CabralGasStationBanner from "../../assets/images/sliders/capa.jpg";

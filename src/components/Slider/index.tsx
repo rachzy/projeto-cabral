@@ -43,7 +43,7 @@ const Slider: React.FC<IProps> = ({ images, floatingDots }) => {
     return images.map((image, index) => {
       return (
         <div
-          key={index}
+          key={image}
           className={`dot ${index === currentSlide && "active"}`}
         />
       );

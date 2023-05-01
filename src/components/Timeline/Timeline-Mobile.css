@@ -7,3 +7,13 @@
     margin-top: 5vh;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .timeline-wrapper .icons {
+    display: none;
+  }
+
+  .timeline-wrapper .description {
+    overflow: visible;
+  }
+}

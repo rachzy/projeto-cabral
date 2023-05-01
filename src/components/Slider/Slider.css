@@ -122,3 +122,14 @@ div.dots div.dot {
 div.dots div.dot.active {
   background-color: #0144b5;
 }
+
+@media screen and (max-width: 520px) {
+  div.slider div.buttons button img {
+    width: 6vh;
+  }
+
+  div.dots div.dot {
+    width: 1vh;
+    height: 1vh;
+  }
+}

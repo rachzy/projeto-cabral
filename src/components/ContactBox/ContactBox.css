@@ -25,6 +25,7 @@ div.contact-box img {
 
 div.contact-box p {
   font-size: 3vh;
+  text-align: center;
 }
 
 @media screen and (max-width: 580px) {

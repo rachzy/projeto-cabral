@@ -1,0 +1,108 @@
+/* OUTDOOR-BOX */
+
+div.outdoor-box {
+  display: flex;
+  width: 100%;
+
+  background-color: #e5e6e7;
+  border-radius: 2vh;
+
+  margin-top: -30vh;
+  padding-bottom: 5vh;
+
+  box-shadow: 0vh 0vh 1vh 0.3vh #00000033;
+}
+
+div.outdoor-box div {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding-inline: 3vh;
+  margin-right: 10vh;
+
+  flex: 1;
+}
+
+div.outdoor-box div img {
+  width: 60%;
+  margin-right: 7vh;
+}
+
+div.outdoor-box div.main-logo {
+  display: flex;
+  flex-direction: column;
+
+  flex: 2;
+}
+
+div.outdoor-box div.main-logo img {
+  margin-left: 10vh;
+  margin-top: 5vh;
+  width: 50%;
+  align-self: flex-start;
+}
+
+div.outdoor-box div.right-side {
+  flex: 1;
+}
+
+div.outdoor-box div.right-side img.hours {
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  div.outdoor-box {
+    flex-direction: column-reverse;
+  }
+
+  div.outdoor-box div {
+    margin: 0;
+  }
+
+  div.outdoor-box div img {
+    width: 20vh;
+    margin: 0;
+  }
+
+  div.outdoor-box div.main-logo {
+    flex: 1;
+    margin-top: 3vh;
+  }
+
+  div.outdoor-box div.main-logo img {
+    align-self: center;
+    margin: 0;
+    width: 30vh;
+  }
+
+  div.outdoor-box div.right-side {
+    display: flex;
+
+    justify-content: space-around;
+  }
+}
+
+/* IMAGE-WRAPPER */
+
+div.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: auto;
+  justify-content: center;
+
+  gap: 6vh;
+
+  margin-bottom: 10vh;
+
+  width: 80%;
+}
+
+div.image-wrapper img {
+  width: 50vh;
+  border-radius: 3vh;
+
+  box-shadow: 0vh 0vh 1vh 1vh #00000033;
+}

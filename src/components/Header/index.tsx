@@ -18,9 +18,15 @@ interface ISocialMedia {
 }
 [];
 
-interface IOptions {
+interface ISubOptions {
   label: string;
   href: string;
+}
+
+interface IOptions {
+  label: string;
+  href?: string;
+  subOptions?: ISubOptions[];
 }
 [];
 
@@ -51,9 +57,19 @@ const DefaultSection: React.FC<IPropsSections> = ({
     });
   }
 
+  function renderSubOptions(subOptions: ISubOptions[]) {
+    return subOptions.map((subOption) => {
+      return <li key={subOption.label}>
+        <Link to={subOption.href}>
+          {subOption.label}
+        </Link>
+      </li>
+    })
+  }
+
   function renderOptions() {
     return options.map((link) => {
-      if (link.href.startsWith("#")) {
+      if (link.href && link.href.startsWith("#")) {
         <li key={link.label}>
           <a href={link.href}>
             {link.label}
@@ -61,11 +77,24 @@ const DefaultSection: React.FC<IPropsSections> = ({
           </a>
         </li>;
       }
+
+      if(!link.href && link.subOptions) {
+        return(
+          <li key={link.label}>
+          <a>
+            {link.label}
+            <div className="underline" />
+            <ul className="sub-options">{renderSubOptions(link.subOptions)}</ul>
+          </a>
+        </li>)
+      }
+
       return (
         <li key={link.label}>
           <Link to={link.href}>
             {link.label}
             <div className="underline" />
+            {link.subOptions && <ul className="sub-options">{renderSubOptions(link.subOptions)}</ul>}
           </Link>
         </li>
       );
@@ -83,7 +112,7 @@ const DefaultSection: React.FC<IPropsSections> = ({
         </div>
         <div className="wrapper-menu">
           <nav>
-            <ul>{renderOptions()}</ul>
+            <ul className="options">{renderOptions()}</ul>
           </nav>
         </div>
       </div>
@@ -118,20 +147,39 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
     });
   }
 
+  function renderSubOptions(subOptions: ISubOptions[]) {
+    return subOptions.map((subOption) => {
+      return <li key={subOption.label}>
+        <Link to={subOption.href}>
+          {subOption.label}
+        </Link>
+      </li>
+    })
+  }
+
   function renderOptions() {
     return options.map((link) => {
-      if (link.href.startsWith("#")) {
-        return (
+        if (link.href && link.href.startsWith("#")) {
           <li key={link.label} onClick={handleOptionClick}>
             <a href={link.href}>{link.label}</a>
           </li>
-        );
-      }
-      return (
-        <li key={link.label} onClick={handleOptionClick}>
+        }
+  
+        if(!link.href && link.subOptions) {
+          return(
+            <li key={link.label}>
+            <a>
+              {link.label}
+            </a>
+            <ul className="sub-options">{renderSubOptions(link.subOptions)}</ul>
+          </li>)
+        }
+  
+        return (
+          <li key={link.label} onClick={handleOptionClick}>
           <Link to={link.href}>{link.label}</Link>
         </li>
-      );
+        );
     });
   }
 
@@ -172,7 +220,7 @@ const Header = () => {
       href: "mailto:contato@redecabral.com.br",
     },
   ];
-  const options = [
+  const options: IOptions[] = [
     {
       label: "Home",
       href: "/",
@@ -183,7 +231,33 @@ const Header = () => {
     },
     {
       label: "Empresas",
-      href: "/empresas",
+      subOptions: [
+        {
+          label: "Posto Cabral Rodovia",
+          href: "/empresas/cabral-rodovia"
+        },
+        {
+          label: "Posto Cabral Rodovia",
+          href: "/empresas/cabral-rodovia"
+        },
+        {
+          label: "Posto Cabral Rodovia",
+          href: "/empresas/cabral-rodovia"
+        },
+        {
+          label: "Posto Cabral Rodovia",
+          href: "/empresas/cabral-rodovia"
+        },
+        {
+          label: "Posto Cabral Rodovia",
+          href: "/empresas/cabral-rodovia"
+        },
+        {
+          label: "Posto Cabral Rodovia",
+          href: "/empresas/cabral-rodovia"
+        },
+        
+      ]
     },
     {
       label: "Serviços",

@@ -89,7 +89,7 @@ header div.menu {
   flex: 2;
 }
 
-.wrapper-menu ul {
+.wrapper-menu ul.options {
   display: flex;
 
   justify-content: space-evenly;
@@ -98,7 +98,7 @@ header div.menu {
   margin-top: 2vh;
 }
 
-.wrapper-menu a {
+.wrapper-menu ul.options a {
   color: #0144b5;
   font-family: "OmnesBoldRoman";
 
@@ -106,11 +106,11 @@ header div.menu {
   font-size: 2.6vmin;
 }
 
-.wrapper-menu a:hover {
+.wrapper-menu ul.options a:hover {
   transform: scale(1.05);
 }
 
-.wrapper-menu a:hover > div.underline {
+.wrapper-menu ul.options a:hover > div.underline {
   width: 100%;
 }
 
@@ -126,4 +126,22 @@ div.underline {
 
   border-radius: 5vh;
   transition: 0.6s all;
+}
+
+/* SUB-OPTIONS */
+
+ul.sub-options {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #0144b5;
+
+  position: absolute;
+  margin-top: 5vh;
+
+  width: 50%;
+}
+
+ul.sub-options a {
+  color: white;
 }

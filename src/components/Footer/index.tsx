@@ -1,6 +1,6 @@
 import "./Footer.css";
 
-import CabralBanner from "../../assets/images/logos/rede-cabral-header-footer.png";
+import CabralBanner from "../../assets/images/logos/rede_cabral_footer.png";
 import PortfolioBanner from "../../assets/images/other/signature-footer.png";
 
 const Footer = () => {

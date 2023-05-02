@@ -1,12 +1,11 @@
 div.info-box {
   width: 38vh;
-  min-height: 32vh;
+  min-height: 35vh;
   max-height: fit-content;
 
   z-index: 99;
 
-  margin: 2vh;
-  padding: 4vh;
+  padding: 5vh;
 
   border-radius: 2vh;
 
@@ -20,4 +19,8 @@ div.info-box {
 
 div.info-box h2 {
   margin-bottom: 3vh;
+}
+
+div.info-box p {
+  font-weight: inherit;
 }

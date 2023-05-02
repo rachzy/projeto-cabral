@@ -14,13 +14,14 @@ const Contact: React.FC<IProps> = ({ contacts }) => {
         <ContactBox
           key={contact.label}
           label={contact.label}
+          href={contact.href}
           icon={contact.icon}
         />
       );
     });
   }
   return (
-    <section>
+    <section id="contato">
       <h2 className="subtitle">:. Fale conosco</h2>
       <div className="contact-wrapper">{renderContacts()}</div>
     </section>

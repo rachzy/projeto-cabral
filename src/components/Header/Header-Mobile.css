@@ -23,7 +23,7 @@ header .mobile-background.active {
 }
 
 header .mobile-background.active a {
-  width: fit-content;
+  width: 100%;
 }
 
 header .hamburguer {
@@ -126,7 +126,7 @@ header .mobile-menu ul.social-medias img {
     width: 100vw;
     background-color: #ffd100;
 
-    padding-block: 1vh;
+    padding-block: 1vw;
 
     margin-bottom: 4vh;
   }

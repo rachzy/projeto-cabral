@@ -21,6 +21,7 @@ footer div.logo img {
 
 footer div.credits {
   display: flex;
+  align-items: center;
 }
 
 footer div.credits p {
@@ -28,8 +29,8 @@ footer div.credits p {
 }
 
 footer div.credits img {
-  width: 14vh;
-  margin-inline: 1vh;
+  width: 8vh;
+  margin: 2vh 2vh;
 }
 
 @media screen and (max-width: 768px) {

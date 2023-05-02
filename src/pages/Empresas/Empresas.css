@@ -7,10 +7,16 @@ div.outdoor-box {
   background-color: #e5e6e7;
   border-radius: 2vh;
 
-  margin-top: -30vh;
+  margin-top: -15%;
   padding-bottom: 5vh;
 
   box-shadow: 0vh 0vh 1vh 0.3vh #00000033;
+}
+
+@media screen and (max-width: 768px) {
+  div.outdoor-box {
+    margin: 0;
+  }
 }
 
 div.outdoor-box div {
@@ -62,7 +68,7 @@ div.outdoor-box div.right-side img.hours {
   }
 
   div.outdoor-box div img {
-    width: 20vh;
+    width: 30%;
     margin: 0;
   }
 

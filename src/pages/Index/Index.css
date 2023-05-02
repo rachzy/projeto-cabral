@@ -2,17 +2,26 @@
 
 div.inline-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   width: 100%;
 
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  div.inline-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 5vh;
+  }
 }
 
 @media screen and (min-width: 920px) {
   div.inline-wrapper {
-    margin-top: -18%;
+    margin-top: -10%;
   }
 }
 
@@ -26,8 +35,8 @@ div.about-box {
 
   justify-content: space-between;
 
-  width: 90%;
-  padding: 3vh 3vh;
+  width: 100%;
+  padding-block: 3vh;
   margin-top: 10vh;
 
   border-radius: 1vh;
@@ -45,11 +54,12 @@ div.about-box {
 
 div.about-box div {
   flex: 1;
-  margin: 3vh 5vh;
+  margin: 5vh 10vh;
 }
 
 div.about-box h2 {
   color: rgb(95, 95, 95);
+  font-size: 4vh;
   margin-bottom: 2vh;
 }
 

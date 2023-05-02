@@ -50,6 +50,7 @@ import EmailIcon from "../../assets/images/buttons/e-mail-footer.png";
 import Services from "../../sections/Services";
 import { IContact } from "../../components/ContactBox";
 import Contact from "../../sections/Contact";
+import LogoSlider, { ILogoSlide } from "../../components/LogoSlider";
 
 const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
@@ -112,14 +113,35 @@ const Index = () => {
       height: 12,
     },
   ];
-  const companiesImages = [
-    CabralRodovia,
-    Cabralzinho,
-    Cabral3,
-    FazendaVale,
-    IzziHoteis,
-    MotelRoma,
-    Cbr,
+  const companiesSlides: ILogoSlide[] = [
+    {
+      image: CabralRodovia,
+      page: "/empresas",
+    },
+    {
+      image: Cabralzinho,
+      page: "/empresas",
+    },
+    {
+      image: Cabral3,
+      page: "/empresas",
+    },
+    {
+      image: FazendaVale,
+      page: "/empresas",
+    },
+    {
+      image: IzziHoteis,
+      page: "/empresas",
+    },
+    {
+      image: MotelRoma,
+      page: "/empresas",
+    },
+    {
+      image: Cbr,
+      page: "/empresas",
+    },
   ];
   const services: IService[] = [
     {
@@ -174,17 +196,19 @@ const Index = () => {
   const contacts: IContact[] = [
     {
       label: "(34) 3354-2270",
+      href: "https://wa.me/+553433542270",
       icon: WhatsappIcon,
     },
     {
       label: "contato@redecabral.com.br",
+      href: "mailto:contato@redecabral.com.br",
       icon: EmailIcon,
     },
   ];
 
   return (
     <main>
-      <section className="full">
+      <section id="home" className="full">
         <Slider images={sliderImages} floatingDots={true} />
       </section>
       <section className="center-content">
@@ -224,7 +248,7 @@ const Index = () => {
             • Propósito.
             "
             color="#ffd100"
-            style={{ color: "#0144b5" }}
+            style={{ color: "#0144b5", fontWeight: "bold" }}
           />
         </div>
         <div className="about-box">
@@ -246,13 +270,13 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section id="sobre">
         <h2 className="subtitle">:. Um pouco sobre nós</h2>
         <Timeline timeline={timeline} />
       </section>
       <section className="full">
         <LineTitle>Empresas do grupo:</LineTitle>
-        <Slider images={companiesImages} />
+        <LogoSlider slides={companiesSlides} />
       </section>
       <section className="full">
         <ImageBackground image={BlueBanner}>
@@ -266,7 +290,7 @@ const Index = () => {
           </div>
         </ImageBackground>
       </section>
-      <section className="full gray">
+      <section id="servicos" className="full gray">
         <div className="fake-wrapper">
           <h2 className="subtitle">
             :. Serviços oferecidos em nossas empresas

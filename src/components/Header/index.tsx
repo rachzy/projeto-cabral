@@ -53,6 +53,14 @@ const DefaultSection: React.FC<IPropsSections> = ({
 
   function renderOptions() {
     return options.map((link) => {
+      if (link.href.startsWith("#")) {
+        <li key={link.label}>
+          <a href={link.href}>
+            {link.label}
+            <div className="underline" />
+          </a>
+        </li>;
+      }
       return (
         <li key={link.label}>
           <Link to={link.href}>
@@ -95,6 +103,7 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
       "#hamburguer-menu-mobile"
     ) as HTMLButtonElement;
     hamburguerMobile.click();
+    window.scrollTo(0, 0);
   }
 
   function renderSocialMedias() {
@@ -111,6 +120,13 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
 
   function renderOptions() {
     return options.map((link) => {
+      if (link.href.startsWith("#")) {
+        return (
+          <li key={link.label} onClick={handleOptionClick}>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        );
+      }
       return (
         <li key={link.label} onClick={handleOptionClick}>
           <Link to={link.href}>{link.label}</Link>
@@ -143,27 +159,27 @@ const Header = () => {
     {
       label: "instagram",
       src: InstaHeader,
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/redecabralsantajuliana/?igshid=YmMyMTA2M2Y%3D",
     },
     {
       label: "whatsapp",
       src: WhatsappHeader,
-      href: "https://web.whatsapp.com",
+      href: "https://wa.me/+553433542270",
     },
     {
       label: "email",
       src: EmailHeader,
-      href: "mailto:exemplo@gmail.com",
+      href: "mailto:contato@redecabral.com.br",
     },
   ];
   const options = [
     {
       label: "Home",
-      href: "/#home",
+      href: "/",
     },
     {
       label: "Sobre nós",
-      href: "/#sobre",
+      href: "#sobre",
     },
     {
       label: "Empresas",
@@ -171,11 +187,11 @@ const Header = () => {
     },
     {
       label: "Serviços",
-      href: "/#servicos",
+      href: "#servicos",
     },
     {
       label: "Fale Conosco",
-      href: "/#contato",
+      href: "#contato",
     },
   ];
 

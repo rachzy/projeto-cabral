@@ -103,14 +103,17 @@ const Empresas = () => {
   const contacts: IContact[] = [
     {
       label: "Rodovia BR 452, KM 231, Zona Rural, Santa Juliana/MG",
+      href: "https://goo.gl/maps/LNwgkTy3aCSaFHVYA",
       icon: PointerIcon,
     },
     {
       label: "(34) 3354-2270",
+      href: "https://wa.me/+553433542270",
       icon: WhatsappIcon,
     },
     {
       label: "contato@redecabral.com.br",
+      href: "mailto:contato@redecabral.com.br",
       icon: EmailIcon,
     },
   ];
@@ -147,7 +150,7 @@ const Empresas = () => {
 
   return (
     <main>
-      <section className="full">
+      <section id="home" className="full">
         <img src={CabralGasStationBanner} alt="posto cabral" />
       </section>
       <section>
@@ -165,7 +168,7 @@ const Empresas = () => {
           </div>
         </div>
       </section>
-      <section className="full">
+      <section id="sobre" className="full">
         <LineTitle>Fotos do Empreendimento</LineTitle>
         <div className="image-wrapper">
           <img src={Pic1} alt="posto cabral" />
@@ -179,7 +182,7 @@ const Empresas = () => {
           <img src={Pic9} alt="posto cabral" />
         </div>
       </section>
-      <section className="full gray">
+      <section id="servicos" className="full gray">
         <div className="fake-wrapper">
           <h2 className="subtitle">
             :. Serviços oferecidos no Posto Cabral Rodovia:
@@ -187,7 +190,7 @@ const Empresas = () => {
           <Services services={services} />
         </div>
       </section>
-      <section className="full">
+      <section className="full" style={{ marginTop: "-4vh" }}>
         <ImageBackground image={BlueBanner}>
           <div className="premios-blue-banner">
             <h1 style={{ color: "white" }}>

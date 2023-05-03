@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 div.logo-slider {
   display: flex;
   flex-direction: column;
@@ -6,12 +15,14 @@ div.logo-slider {
   align-items: center;
 }
 
-div.logo-slider div {
+div.logo-slider div.sliders {
   display: flex;
-  flex-wrap: wrap;
 
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  width: 80%;
+  overflow: hidden;
 }
 
 img.logo {
@@ -20,19 +31,40 @@ img.logo {
 
   filter: grayscale(100%);
   transition: 0.2s all;
+
+  width: 0;
 }
 
 img.logo:hover {
   filter: grayscale(0%);
 }
 
-img.logo.active {
+div.logo-slider a {
+  display: none;
+}
+
+div.logo-slider a.active {
+  display: block;
+}
+
+div.logo-slider a.active img.logo {
   position: static;
   opacity: 100%;
+  width: fit-content;
+
+  animation: fadeIn 0.2s;
 }
 
 @media screen and (max-width: 780px) {
+  div.logo-slider a {
+    display: block;
+  }
+  div.logo-slider div.sliders {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   img.logo {
+    width: fit-content;
     position: static;
     opacity: 100%;
 

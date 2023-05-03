@@ -113,13 +113,15 @@ const DefaultSection: React.FC<IPropsSections> = ({
         <ul>{renderSocialMedias()}</ul>
       </div>
       <div className="menu">
-        <div className="wrapper-logo">
-          <img onClick={handleLogoClick} src={Logo} alt="logo rede cabral" />
-        </div>
-        <div className="wrapper-menu">
-          <nav>
-            <ul className="options">{renderOptions()}</ul>
-          </nav>
+        <div className="menu-content">
+          <div className="wrapper-logo">
+            <img onClick={handleLogoClick} src={Logo} alt="logo rede cabral" />
+          </div>
+          <div className="wrapper-menu">
+            <nav>
+              <ul className="options">{renderOptions()}</ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>

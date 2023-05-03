@@ -13,7 +13,7 @@ const ImageBackground: React.FC<IProps> = ({ image, style, children }) => {
       style={{ backgroundImage: `url(${image})`, ...style }}
       className="image-background"
     >
-      {children}
+      <div className="content-wrapper">{children}</div>
     </div>
   );
 };

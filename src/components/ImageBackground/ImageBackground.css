@@ -2,8 +2,15 @@ div.image-background {
   display: flex;
   flex-direction: column;
 
+  justify-content: center;
+  align-items: center;
+
   background-repeat: no-repeat;
   background-size: cover;
 
-  padding: 2vh;
+  padding-block: 7vh;
+}
+
+div.image-background div.content-wrapper {
+  width: 80%;
 }

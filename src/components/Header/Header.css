@@ -24,6 +24,7 @@ header div.mobile {
 
 header div.social-media {
   display: flex;
+  margin: auto;
 
   justify-content: flex-end;
   align-items: center;
@@ -31,16 +32,17 @@ header div.social-media {
   height: 10vh;
 
   flex-grow: 1;
+
+  width: 80%;
 }
 
 div.social-media ul {
   display: flex;
-  margin-right: 5vw;
 }
 
 div.social-media ul li {
   width: 4vh;
-  margin-inline: 1vh;
+  margin-left: 2vh;
   list-style: none;
 }
 
@@ -53,13 +55,21 @@ div.social-media ul li img {
 header div.menu {
   display: flex;
 
+  justify-content: center;
   align-items: center;
 
   flex-grow: 1;
   background-color: #ffd100;
 
-  padding: 1vh 2vh;
-  padding-bottom: 2vh;
+  padding-block: 1vh 2vh;
+}
+
+header div.menu .menu-content {
+  display: flex;
+
+  align-items: center;
+
+  width: 80%;
 }
 
 /* WRAPPER-LOGO */
@@ -67,7 +77,7 @@ header div.menu {
 .wrapper-logo {
   display: flex;
 
-  justify-content: center;
+  padding-left: 3vh;
 
   flex: 1;
 }
@@ -92,7 +102,7 @@ header div.menu {
 .wrapper-menu ul.options {
   display: flex;
 
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   width: 100%;
   margin-top: 2vh;

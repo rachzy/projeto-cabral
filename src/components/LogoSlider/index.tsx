@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, memo } from "react";
+import { useState, useCallback, memo } from "react";
 import "./LogoSlider.css";
 import { Link } from "react-router-dom";
 
@@ -21,16 +21,14 @@ const LogoSlider: React.FC<IProps> = memo(({ slides }) => {
           <Link
             key={index}
             to={logo.page}
+            className={
+              (index >= firstSlide && index <= firstSlide + 3 && "active") || ""
+            }
             onClick={() => {
               window.scrollTo(0, 0);
             }}
           >
-            <img
-              src={logo.image}
-              className={`logo ${
-                index >= firstSlide && index <= firstSlide + 3 && "active"
-              }`}
-            />
+            <img src={logo.image} className={"logo"} />
           </Link>
         );
       }
@@ -76,7 +74,7 @@ const LogoSlider: React.FC<IProps> = memo(({ slides }) => {
 
   return (
     <div className="logo-slider">
-      <div>{renderSlides()}</div>
+      <div className="sliders">{renderSlides()}</div>
       <div className="dots">{renderDots()}</div>
     </div>
   );

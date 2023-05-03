@@ -14,7 +14,7 @@ const App = () => {
       <ScrollButton />
       <Routes>
         <Route index element={<Index />} />
-        <Route path="/empresas" element={<Empresas />} />
+        <Route path="/empresas/:companyId" element={<Empresas />} />
       </Routes>
       <Footer />
     </Router>

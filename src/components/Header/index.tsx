@@ -59,42 +59,53 @@ const DefaultSection: React.FC<IPropsSections> = ({
 
   function renderSubOptions(subOptions: ISubOptions[]) {
     return subOptions.map((subOption) => {
-      return <li key={subOption.label}>
-        <Link to={subOption.href}>
-          {subOption.label}
-        </Link>
-      </li>
-    })
+      return (
+        <li key={subOption.label}>
+          <Link to={subOption.href} style={{ color: "white" }}>
+            {subOption.label}
+          </Link>
+        </li>
+      );
+    });
   }
 
   function renderOptions() {
     return options.map((link) => {
       if (link.href && link.href.startsWith("#")) {
         <li key={link.label}>
-          <a href={link.href}>
+          <a className="menu-option" href={link.href}>
             {link.label}
             <div className="underline" />
           </a>
         </li>;
       }
 
-      if(!link.href && link.subOptions) {
-        return(
+      if (!link.href && link.subOptions) {
+        return (
           <li key={link.label}>
-          <a>
-            {link.label}
-            <div className="underline" />
-            <ul className="sub-options">{renderSubOptions(link.subOptions)}</ul>
-          </a>
-        </li>)
+            <a className="menu-option">
+              {link.label}
+              <div className="underline" />
+              <ul className="sub-options">
+                {renderSubOptions(link.subOptions)}
+              </ul>
+            </a>
+          </li>
+        );
       }
+
+      if (!link.href) return null;
 
       return (
         <li key={link.label}>
-          <Link to={link.href}>
+          <Link className="menu-option" to={link.href}>
             {link.label}
             <div className="underline" />
-            {link.subOptions && <ul className="sub-options">{renderSubOptions(link.subOptions)}</ul>}
+            {link.subOptions && (
+              <ul className="sub-options">
+                {renderSubOptions(link.subOptions)}
+              </ul>
+            )}
           </Link>
         </li>
       );
@@ -149,37 +160,38 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
 
   function renderSubOptions(subOptions: ISubOptions[]) {
     return subOptions.map((subOption) => {
-      return <li key={subOption.label}>
-        <Link to={subOption.href}>
-          {subOption.label}
-        </Link>
-      </li>
-    })
+      return (
+        <li key={subOption.label}>
+          <Link to={subOption.href}>{subOption.label}</Link>
+        </li>
+      );
+    });
   }
 
   function renderOptions() {
     return options.map((link) => {
-        if (link.href && link.href.startsWith("#")) {
-          <li key={link.label} onClick={handleOptionClick}>
-            <a href={link.href}>{link.label}</a>
-          </li>
-        }
-  
-        if(!link.href && link.subOptions) {
-          return(
-            <li key={link.label}>
-            <a>
-              {link.label}
-            </a>
-            <ul className="sub-options">{renderSubOptions(link.subOptions)}</ul>
-          </li>)
-        }
-  
+      if (link.href && link.href.startsWith("#")) {
+        <li key={link.label} onClick={handleOptionClick}>
+          <a href={link.href}>{link.label}</a>
+        </li>;
+      }
+
+      if (!link.href && link.subOptions) {
         return (
-          <li key={link.label} onClick={handleOptionClick}>
+          <li key={link.label}>
+            <a>{link.label}</a>
+            <ul className="sub-options">{renderSubOptions(link.subOptions)}</ul>
+          </li>
+        );
+      }
+
+      if (!link.href) return null;
+
+      return (
+        <li key={link.label} onClick={handleOptionClick}>
           <Link to={link.href}>{link.label}</Link>
         </li>
-        );
+      );
     });
   }
 
@@ -193,7 +205,7 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
         <div className="mobile-menu">
           <img src={Logo} alt="logo rede cabral" />
           <nav className="options">
-            <ul>{renderOptions()}</ul>
+            <ul className="options-list">{renderOptions()}</ul>
           </nav>
           <ul className="social-medias">{renderSocialMedias()}</ul>
         </div>
@@ -234,30 +246,29 @@ const Header = () => {
       subOptions: [
         {
           label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia"
+          href: "/empresas/cabral-rodovia",
         },
         {
           label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia"
+          href: "/empresas/cabral-rodovia",
         },
         {
           label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia"
+          href: "/empresas/cabral-rodovia",
         },
         {
           label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia"
+          href: "/empresas/cabral-rodovia",
         },
         {
           label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia"
+          href: "/empresas/cabral-rodovia",
         },
         {
           label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia"
+          href: "/empresas/cabral-rodovia",
         },
-        
-      ]
+      ],
     },
     {
       label: "Serviços",

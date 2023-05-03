@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, memo } from "react";
 import "./LogoSlider.css";
 import { Link } from "react-router-dom";
 
@@ -11,15 +11,15 @@ interface IProps {
   slides: ILogoSlide[];
 }
 
-const LogoSlider: React.FC<IProps> = ({ slides }) => {
+const LogoSlider: React.FC<IProps> = memo(({ slides }) => {
   const [firstSlide, setFirstSlide] = useState(0);
 
-  function renderSlides() {
+  const renderSlides = useCallback(() => {
     return slides.map((logo, index) => {
       if (logo.page) {
         return (
           <Link
-            key={logo.image}
+            key={index}
             to={logo.page}
             onClick={() => {
               window.scrollTo(0, 0);
@@ -36,7 +36,7 @@ const LogoSlider: React.FC<IProps> = ({ slides }) => {
       }
       return (
         <img
-          key={logo.image}
+          key={index}
           src={logo.image}
           className={`logo ${
             index >= firstSlide && index <= firstSlide + 3 && "active"
@@ -44,28 +44,29 @@ const LogoSlider: React.FC<IProps> = ({ slides }) => {
         />
       );
     });
-  }
+  }, [slides, firstSlide]);
 
-  function renderDots() {
+  const renderDots = useCallback(() => {
     return slides.map((logo, index) => {
       if (index % 4 !== 0) return null;
       return (
         <div
-          key={logo.image}
+          key={index}
           className={`dot ${index === firstSlide && "active"}`}
         ></div>
       );
     });
-  }
+  }, [slides, firstSlide]);
 
   useEffect(() => {
-    setInterval(() => {
+    const timer = setTimeout(() => {
       setFirstSlide((currentValue) => {
         if (currentValue + 4 >= slides.length - 1) return 0;
         return currentValue + 4;
       });
     }, 4000);
-  }, []);
+    return () => clearTimeout(timer);
+  }, [slides, firstSlide]);
 
   return (
     <div className="logo-slider">
@@ -73,6 +74,6 @@ const LogoSlider: React.FC<IProps> = ({ slides }) => {
       <div className="dots">{renderDots()}</div>
     </div>
   );
-};
+});
 
 export default LogoSlider;

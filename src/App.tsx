@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollButton from "./components/ScrollButton";
+
+import Index from "./pages/Index";
 import Empresas from "./pages/Empresas";
 
 const App = () => {

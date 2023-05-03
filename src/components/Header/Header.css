@@ -98,9 +98,9 @@ header div.menu {
   margin-top: 2vh;
 }
 
-.wrapper-menu ul.options a {
+a.menu-option {
   color: #0144b5;
-  font-family: "OmnesBoldRoman";
+  font-family: "OmnesBoldRoman", sans-serif;
 
   transition: 0.2s all;
   font-size: 2.6vmin;
@@ -112,6 +112,10 @@ header div.menu {
 
 .wrapper-menu ul.options a:hover > div.underline {
   width: 100%;
+}
+
+.wrapper-menu ul.options a:hover > ul.sub-options {
+  display: flex;
 }
 
 /* UNDERLINE */
@@ -131,17 +135,40 @@ div.underline {
 /* SUB-OPTIONS */
 
 ul.sub-options {
-  display: flex;
+  display: none;
   flex-direction: column;
 
   background-color: #0144b5;
 
   position: absolute;
-  margin-top: 5vh;
+  margin-top: 2vh;
 
-  width: 50%;
+  row-gap: 2vh;
+
+  padding: 3vh;
+  border-radius: 0vh 2vh 2vh 2vh;
+}
+
+ul.sub-options.active {
+  display: flex;
+}
+
+ul.sub-options::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  width: 0;
+  height: 0;
+  border: 3vh solid transparent;
+  border-top-color: #0144b5;
+  z-index: 9999;
+
+  margin-top: -8vh;
+
+  transform: rotate(180deg);
 }
 
 ul.sub-options a {
   color: white;
+  font-family: "OmnesBoldRoman", sans-serif;
 }

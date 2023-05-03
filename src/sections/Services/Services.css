@@ -2,6 +2,9 @@ div.services-wrapper {
   display: flex;
   flex-wrap: wrap;
 
+  margin: auto;
+
+  justify-content: space-between;
   align-items: center;
 }
 

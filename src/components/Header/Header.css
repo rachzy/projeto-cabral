@@ -171,4 +171,10 @@ ul.sub-options::after {
 ul.sub-options a {
   color: white;
   font-family: "OmnesBoldRoman", sans-serif;
+
+  transition: 0.2s all;
+}
+
+ul.sub-options a:hover {
+  color: #ffd100;
 }

@@ -61,9 +61,7 @@ const DefaultSection: React.FC<IPropsSections> = ({
     return subOptions.map((subOption) => {
       return (
         <li key={subOption.label}>
-          <Link to={subOption.href} style={{ color: "white" }}>
-            {subOption.label}
-          </Link>
+          <Link to={subOption.href}>{subOption.label}</Link>
         </li>
       );
     });
@@ -72,12 +70,14 @@ const DefaultSection: React.FC<IPropsSections> = ({
   function renderOptions() {
     return options.map((link) => {
       if (link.href && link.href.startsWith("#")) {
-        <li key={link.label}>
-          <a className="menu-option" href={link.href}>
-            {link.label}
-            <div className="underline" />
-          </a>
-        </li>;
+        return (
+          <li key={link.label}>
+            <a className="menu-option" href={link.href}>
+              {link.label}
+              <div className="underline" />
+            </a>
+          </li>
+        );
       }
 
       if (!link.href && link.subOptions) {
@@ -101,11 +101,6 @@ const DefaultSection: React.FC<IPropsSections> = ({
           <Link className="menu-option" to={link.href}>
             {link.label}
             <div className="underline" />
-            {link.subOptions && (
-              <ul className="sub-options">
-                {renderSubOptions(link.subOptions)}
-              </ul>
-            )}
           </Link>
         </li>
       );
@@ -143,7 +138,6 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
       "#hamburguer-menu-mobile"
     ) as HTMLButtonElement;
     hamburguerMobile.click();
-    window.scrollTo(0, 0);
   }
 
   function renderSocialMedias() {
@@ -171,9 +165,11 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
   function renderOptions() {
     return options.map((link) => {
       if (link.href && link.href.startsWith("#")) {
-        <li key={link.label} onClick={handleOptionClick}>
-          <a href={link.href}>{link.label}</a>
-        </li>;
+        return (
+          <li key={link.label} onClick={handleOptionClick}>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        );
       }
 
       if (!link.href && link.subOptions) {
@@ -244,26 +240,6 @@ const Header = () => {
     {
       label: "Empresas",
       subOptions: [
-        {
-          label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia",
-        },
-        {
-          label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia",
-        },
-        {
-          label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia",
-        },
-        {
-          label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia",
-        },
-        {
-          label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia",
-        },
         {
           label: "Posto Cabral Rodovia",
           href: "/empresas/cabral-rodovia",

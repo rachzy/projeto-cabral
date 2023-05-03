@@ -5,11 +5,10 @@ div.service {
   justify-content: center;
   align-items: center;
 
-  width: 25vh;
-  height: 25vh;
-
-  margin-right: 6vh;
   margin-block: 6vh;
+
+  width: 30vh;
+  height: 30vh;
 
   padding: 4vh;
   border-radius: 2vh;

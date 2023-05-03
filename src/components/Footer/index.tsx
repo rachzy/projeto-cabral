@@ -12,7 +12,9 @@ const Footer = () => {
 
       <div className="credits">
         <p>Desenvolvido por: </p>
-        <img src={PortfolioBanner} />
+        <a href="https://agenciaportfolio.com.br" target="_blank">
+          <img src={PortfolioBanner} />
+        </a>
       </div>
     </footer>
   );

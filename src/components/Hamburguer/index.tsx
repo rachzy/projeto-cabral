@@ -1,6 +1,6 @@
 import React, { MutableRefObject, useRef } from "react";
 
-import "./Hamburguer.css";
+import "./Hamburguer.scss";
 
 interface IProps {
   id?: string;
@@ -13,12 +13,7 @@ const Hamburguer: React.FC<IProps> = ({ id, onClick }) => {
   function handleButtonClick() {
     if (!btn || !btn.current) return;
 
-    btn.current.classList.toggle("opened");
-
-    btn.current.setAttribute(
-      "aria-expanded",
-      btn.current.classList.contains("opened").toString()
-    );
+    btn.current.classList.toggle("is-active");
 
     if (!onClick) return;
     onClick();
@@ -27,22 +22,12 @@ const Hamburguer: React.FC<IProps> = ({ id, onClick }) => {
   return (
     <button
       id={id}
-      className="hamburguer menu"
+      className="c-hamburger c-hamburger--htx"
       onClick={handleButtonClick}
       aria-label="Main Menu"
       ref={btn}
     >
-      <svg viewBox="0 0 100 100">
-        <path
-          className="line line1"
-          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
-        />
-        <path className="line line2" d="M 20,50 H 80" />
-        <path
-          className="line line3"
-          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
-        />
-      </svg>
+      <span>toggle menu</span>
     </button>
   );
 };

@@ -1,0 +1,96 @@
+// hamburguer menu • http://callmenick.com/_development/css-hamburger-menu-icons/
+
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-right: 3vh;
+  padding: 0;
+  width: 5vh;
+  height: 15vh;
+  z-index: 2;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  &:focus {
+    outline: none;
+  }
+  span {
+    display: block;
+    position: absolute;
+    top: 3.5vh;
+    left: 0;
+    right: 0;
+    height: 0.4vh;
+    background: #0144b5;
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 0.4vh;
+      background-color: #0144b5;
+      content: "";
+    }
+    &:before {
+      top: -1.5vh;
+    }
+    &:after {
+      bottom: -1.5vh;
+    }
+  }
+}
+
+.c-hamburger--htx {
+  span {
+    -webkit-transition: background 0s 0.2s;
+    transition: background 0s 0.2s;
+    &:before, &:after {
+      -webkit-transition-duration: 0.2s, 0.2s;
+      transition-duration: 0.2s, 0.2s;
+      -webkit-transition-delay: 0.2s, 0s;
+      transition-delay: 0.2s, 0s;    
+    }
+    &:before {
+        -webkit-transition-property: top, -webkit-transform;
+        transition-property: top, transform;
+      }
+    &:after {
+      -webkit-transition-property: bottom, -webkit-transform;
+      transition-property: bottom, transform;
+    }
+  }
+  &.is-active {
+    span {
+      background: none;   
+
+      &:before, &:after {
+        -webkit-transition-delay: 0s, 0.2s;
+        transition-delay: 0s, 0.2s;
+      } 
+    
+      &:before {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:after {
+        bottom: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+} 

@@ -9,10 +9,7 @@ div.info-box {
 
   border-radius: 2vh;
 
-  -webkit-filter: drop-shadow(
-    -1vw 2vh 1vw rgba(0, 0, 0, 0.384)
-  ); /* Chrome, Safari, Opera */
-  filter: drop-shadow(-1vw 2vh 1vw rgba(0, 0, 0, 0.384));
+  box-shadow: 0vh 1.2vh 0.7vh 0vh rgba(0, 0, 0, 0.363);
 
   color: white;
 }

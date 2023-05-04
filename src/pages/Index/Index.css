@@ -54,7 +54,7 @@ div.about-box {
 
 div.about-box div {
   flex: 1;
-  margin: 5vh 10vh;
+  padding: 5vh;
 }
 
 div.about-box h2 {

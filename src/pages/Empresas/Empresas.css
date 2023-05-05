@@ -111,6 +111,12 @@ div.image-wrapper img {
   box-shadow: 0vh 0vh 1vh 1vh #00000033;
 }
 
+@media screen and (max-width: 768px) {
+  div.image-wrapper img {
+    width: 80%;
+  }
+}
+
 /* PREMIOS BLUE-BANNER */
 
 div.premios-blue-banner {
@@ -183,7 +189,8 @@ div.top div.line {
 
 @media screen and (max-width: 1000px) {
   div.top div.line {
-    display: none;
+    height: 0.3vh;
+    width: 100%;
   }
 }
 
@@ -212,9 +219,24 @@ div.bottom {
   align-items: center;
 }
 
-div.bottom h2 {
+h2.free-card {
   flex: 2;
   color: white;
+  text-align: center;
+}
+
+h2.free-card.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  h2.free-card.desktop {
+    display: none;
+  }
+
+  h2.free-card.mobile {
+    display: block;
+  }
 }
 
 div.bottom p {

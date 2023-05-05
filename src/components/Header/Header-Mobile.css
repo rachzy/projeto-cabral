@@ -13,7 +13,7 @@ header .mobile-background {
   opacity: 0%;
   transition: 0.3s all;
 
-  z-index: -99;
+  z-index: 99;
 }
 
 header .mobile-background.active {
@@ -122,6 +122,8 @@ header .mobile-menu nav.options li:hover > ul.sub-options {
   header div.mobile {
     display: flex;
     justify-content: flex-end;
+
+    width: 100;
   }
 
   /* FAKE-HEADER */

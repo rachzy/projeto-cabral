@@ -158,7 +158,7 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
   function renderSubOptions(subOptions: ISubOptions[]) {
     return subOptions.map((subOption) => {
       return (
-        <li key={subOption.label}>
+        <li key={subOption.label} onClick={handleOptionClick}>
           <Link to={subOption.href}>{subOption.label}</Link>
         </li>
       );

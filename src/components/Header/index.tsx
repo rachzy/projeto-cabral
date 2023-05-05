@@ -140,6 +140,7 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
       "#hamburguer-menu-mobile"
     ) as HTMLButtonElement;
     hamburguerMobile.click();
+    window.scrollTo(0, 0);
   }
 
   function renderSocialMedias() {
@@ -201,7 +202,7 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
       />
       <div className="mobile-background" ref={menuRef}>
         <div className="mobile-menu">
-          <img src={Logo} alt="logo rede cabral" />
+          <img src={Logo} onClick={handleOptionClick} alt="logo rede cabral" />
           <nav className="options">
             <ul className="options-list">{renderOptions()}</ul>
           </nav>

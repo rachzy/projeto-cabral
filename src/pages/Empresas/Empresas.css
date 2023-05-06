@@ -97,11 +97,18 @@ div.image-wrapper {
   flex-wrap: wrap;
 
   margin: auto;
-  justify-content: center;
+  justify-content: space-between;
 
   gap: 6vh;
 
+  width: 80%;
   margin-bottom: 10vh;
+}
+
+@media screen and (max-width: 1000px) {
+  div.image-wrapper {
+    justify-content: center;
+  }
 }
 
 div.image-wrapper img {
@@ -113,7 +120,7 @@ div.image-wrapper img {
 
 @media screen and (max-width: 768px) {
   div.image-wrapper img {
-    width: 80%;
+    width: 100%;
   }
 }
 

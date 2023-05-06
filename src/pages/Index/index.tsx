@@ -52,6 +52,8 @@ import { IContact } from "../../components/ContactBox";
 import Contact from "../../sections/Contact";
 import LogoSlider, { ILogoSlide } from "../../components/LogoSlider";
 
+import companies from "../../data/companies";
+
 const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
   const timeline: ITimeline[] = [
@@ -113,36 +115,12 @@ const Index = () => {
       height: 12,
     },
   ];
-  const companiesSlides: ILogoSlide[] = [
-    {
-      image: CabralRodovia,
-      page: "/empresas",
-    },
-    {
-      image: Cabralzinho,
-      page: "/empresas",
-    },
-    {
-      image: Cabral3,
-      page: "/empresas",
-    },
-    {
-      image: FazendaVale,
-      page: "/empresas",
-    },
-    {
-      image: IzziHoteis,
-      page: "/empresas",
-    },
-    {
-      image: MotelRoma,
-      page: "/empresas",
-    },
-    {
-      image: Cbr,
-      page: "/empresas",
-    },
-  ];
+  const companiesSlides: ILogoSlide[] = companies.map((company) => {
+    return {
+      image: company.logo,
+      page: `/empresas/${company.id}`,
+    };
+  });
   const services: IService[] = [
     {
       label: "Abastecimento de Combustíveis",

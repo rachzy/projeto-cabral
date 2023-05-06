@@ -122,8 +122,6 @@ header .mobile-menu nav.options li:hover > ul.sub-options {
   header div.mobile {
     display: flex;
     justify-content: flex-end;
-
-    width: 100;
   }
 
   /* FAKE-HEADER */

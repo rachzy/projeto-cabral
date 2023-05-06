@@ -11,6 +11,8 @@ import InstaHeader from "../../assets/images/buttons/insta-header.png";
 import WhatsappHeader from "../../assets/images/buttons/whatsapp-header.png";
 import EmailHeader from "../../assets/images/buttons/e-mail-header.png";
 
+import companies from "../../data/companies";
+
 interface ISocialMedia {
   label: string;
   src: string;
@@ -129,6 +131,7 @@ const DefaultSection: React.FC<IPropsSections> = ({
 };
 
 const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
+  const navigate = useNavigate();
   const menuRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   function handleHamburguerClick() {
@@ -194,8 +197,15 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
     });
   }
 
+  function handleMobileBarClick(
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
+    if (!e.target.toString().includes("DivElement")) return;
+    navigate("/");
+  }
+
   return (
-    <div className="mobile">
+    <div className="mobile" onClick={handleMobileBarClick}>
       <Hamburguer
         id={"hamburguer-menu-mobile"}
         onClick={handleHamburguerClick}
@@ -231,6 +241,12 @@ const Header = () => {
       href: "mailto:contato@redecabral.com.br",
     },
   ];
+  const companiesSubOptions: ISubOptions[] = companies.map((company) => {
+    return {
+      href: `/empresas/${company.id}`,
+      label: company.title,
+    };
+  });
   const options: IOptions[] = [
     {
       label: "Home",
@@ -242,12 +258,7 @@ const Header = () => {
     },
     {
       label: "Empresas",
-      subOptions: [
-        {
-          label: "Posto Cabral Rodovia",
-          href: "/empresas/cabral-rodovia",
-        },
-      ],
+      subOptions: companiesSubOptions,
     },
     {
       label: "Serviços",

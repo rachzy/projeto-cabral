@@ -21,7 +21,7 @@ import IzziHoteis from "../../assets/images/logos/izzi-hoteis.png";
 import MotelRoma from "../../assets/images/logos/motel-roma.png";
 import Cbr from "../../assets/images/logos/cbr.png";
 
-import GasStationBuilding from "../../assets/images/other/building-posto-cabral.png";
+import GasStationBuilding from "../../assets/images/companies/cabral-rodovia/building-posto-cabral.png";
 
 import BlueBanner from "../../assets/images/other/frase-miolo.jpg";
 

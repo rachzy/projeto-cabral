@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import "./Empresas.css";
 
 import ClubeVipCabral from "../../assets/images/logos/clube-vip-cheaedr.png";
-import Twenty4Logo from "../../assets/images/logos/24horas-header.png";
 import ClubpetroBanner from "../../assets/images/logos/clube-petro-miolo.png";
 
 import Services from "../../sections/Services";
@@ -84,15 +83,21 @@ const Empresas = () => {
       <section>
         <div className="outdoor-box">
           <div className="main-logo">
-            <img src={company.logo} alt={company.id} />
+            <img
+              src={company.logo}
+              alt={company.title}
+              style={
+                company.bannerSize ? { width: `${company.bannerSize}vh` } : {}
+              }
+            />
           </div>
           <div className="right-side">
             {company.vip && (
               <img src={ClubeVipCabral} alt="cabral clube vip logo" />
             )}
-            {company.twenty4seven && (
+            {company.timetableBanner && (
               <img
-                src={Twenty4Logo}
+                src={company.timetableBanner}
                 alt="cabral 24horas logo"
                 className="hours"
               />

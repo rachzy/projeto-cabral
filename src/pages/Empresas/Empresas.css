@@ -46,7 +46,7 @@ div.outdoor-box div.main-logo {
 div.outdoor-box div.main-logo img {
   margin-left: 10vh;
   margin-top: 5vh;
-  width: 50%;
+  width: 30vh;
   align-self: flex-start;
 }
 
@@ -146,7 +146,7 @@ div.premios-wrapper {
 
   margin: auto;
 
-  width: 80%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -165,6 +165,10 @@ div.premios-wrapper div.top {
   display: flex;
   margin-block: 5vh;
   gap: 10vh;
+}
+
+div.premios-wrapper div.top img {
+  align-self: center;
 }
 
 @media screen and (max-width: 1000px) {

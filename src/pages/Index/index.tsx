@@ -13,14 +13,6 @@ import GasIcon from "../../assets/images/icons/timeline/ic-posto.png";
 import PeopleIcon from "../../assets/images/icons/timeline/ic-filhos.png";
 import EngineerIcon from "../../assets/images/icons/timeline/ic-construtora.png";
 
-import CabralRodovia from "../../assets/images/logos/posto-cabral-rodovia.png";
-import Cabralzinho from "../../assets/images/logos/posto-cabralzinho.png";
-import Cabral3 from "../../assets/images/logos/posto-cabral-3.png";
-import FazendaVale from "../../assets/images/logos/fazenda-do-vale.png";
-import IzziHoteis from "../../assets/images/logos/izzi-hoteis.png";
-import MotelRoma from "../../assets/images/logos/motel-roma.png";
-import Cbr from "../../assets/images/logos/cbr.png";
-
 import GasStationBuilding from "../../assets/images/companies/cabral-rodovia/building-posto-cabral.png";
 
 import BlueBanner from "../../assets/images/other/frase-miolo.jpg";

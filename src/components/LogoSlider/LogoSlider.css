@@ -51,6 +51,8 @@ div.logo-slider a.active img.logo {
   position: static;
   opacity: 100%;
   width: fit-content;
+  max-width: 30vh;
+  max-height: 15vh;
 
   animation: fadeIn 0.2s;
 }
@@ -64,9 +66,13 @@ div.logo-slider a.active img.logo {
     justify-content: center;
   }
   img.logo {
-    width: fit-content;
     position: static;
     opacity: 100%;
+    width: fit-content;
+    max-width: 30vh;
+    max-height: 15vh;
+
+    margin: 4vh;
 
     filter: grayscale(100%);
   }

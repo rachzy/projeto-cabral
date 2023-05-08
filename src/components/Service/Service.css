@@ -5,8 +5,6 @@ div.service {
   justify-content: center;
   align-items: center;
 
-  margin-block: 6vh;
-
   width: 30vh;
   height: 30vh;
 
@@ -26,10 +24,4 @@ div.service p {
   font-family: "OmnesBoldRoman", sans-serif;
   text-align: center;
   font-size: 3vh;
-}
-
-@media screen and (max-width: 768px) {
-  div.service {
-    margin-right: 0;
-  }
 }

@@ -48,6 +48,7 @@ div.outdoor-box div.main-logo img {
   margin-top: 5vh;
   width: 30vh;
   align-self: flex-start;
+  max-width: 100%;
 }
 
 div.outdoor-box div.right-side {
@@ -97,9 +98,9 @@ div.image-wrapper {
   flex-wrap: wrap;
 
   margin: auto;
-  justify-content: space-between;
 
-  gap: 6vh;
+  row-gap: 6vh;
+  column-gap: 6%;
 
   width: 80%;
   margin-bottom: 10vh;

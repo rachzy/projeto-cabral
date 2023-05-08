@@ -106,7 +106,7 @@ const Empresas = () => {
         </div>
       </section>
       <section id="sobre" className="full">
-        <LineTitle>Fotos do Empreendimento</LineTitle>
+        <LineTitle>Fotos dos Empreendimentos</LineTitle>
         <div className="image-wrapper">{renderPics()}</div>
       </section>
       <section id="servicos" className="full gray">

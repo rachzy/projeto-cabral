@@ -5,6 +5,7 @@ div.info-box {
 
   z-index: 99;
 
+  margin-block: 4vh;
   padding: 5vh;
 
   border-radius: 2vh;

@@ -2,21 +2,12 @@
 
 div.inline-wrapper {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
-  width: 100%;
+  width: 86vw;
 
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-}
-
-@media screen and (max-width: 1000px) {
-  div.inline-wrapper {
-    flex-wrap: wrap;
-    justify-content: center;
-
-    gap: 5vh;
-  }
 }
 
 @media screen and (min-width: 920px) {

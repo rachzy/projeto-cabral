@@ -3,15 +3,19 @@ div.services-wrapper {
   flex-wrap: wrap;
 
   margin: auto;
+
+  justify-content: space-between;
   align-items: center;
 
-  gap: 6vh;
+  row-gap: 4vh;
+
   margin-bottom: 8vh;
 }
 
 @media screen and (max-width: 920px) {
   div.services-wrapper {
     justify-content: center;
+    column-gap: 4vh;
   }
 }
 

@@ -48,7 +48,7 @@ const Timeline: React.FC<ITimelineProps> = ({ timeline }) => {
           className="description"
           style={{
             marginBottom: section.image ? "8vh" : `${section.height}vh`,
-            height: section.image ? "fit-content" : "12vh",
+            height: section.image ? "50vh" : "12vh",
           }}
           key={section.description}
         >

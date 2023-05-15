@@ -71,7 +71,7 @@ const Index = () => {
       primeiro posto de combustíveis, o <span class="bold">Posto Cabral Rodovia</span>.
       `,
       icon: GasIcon,
-      height: 42,
+      height: 45,
       image: GasStationBuilding,
     },
     {
@@ -102,7 +102,7 @@ const Index = () => {
     },
     {
       year: 2022,
-      description: `Inauguração da <span class="bold">Posto Cabral 3.</span>`,
+      description: `Inauguração do <span class="bold">Posto Cabral 3.</span>`,
       icon: GasIcon,
       height: 12,
     },

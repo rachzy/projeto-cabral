@@ -179,6 +179,7 @@ const FazendaDoVale: ICompany = {
     },
   ],
   timetableBanner: horario,
+  customInstagram: "https://www.instagram.com/fazendadovalehotel/",
 };
 
 export default FazendaDoVale;

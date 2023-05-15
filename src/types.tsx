@@ -15,4 +15,5 @@ export interface ICompany {
   advantages?: IAdvantage[];
   vip?: boolean;
   timetableBanner?: string;
+  customInstagram?: string;
 }

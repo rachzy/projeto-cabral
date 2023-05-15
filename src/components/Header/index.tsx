@@ -1,5 +1,5 @@
-import React, { MutableRefObject, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { MutableRefObject, useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import "./Header.css";
 import "./Header-Mobile.css";
@@ -224,7 +224,9 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
 };
 
 const Header = () => {
-  const socialMedias = [
+  const location = useLocation();
+
+  const defaultSocialMediasValue = [
     {
       label: "instagram",
       src: InstaHeader,
@@ -241,6 +243,9 @@ const Header = () => {
       href: "mailto:contato@redecabral.com.br",
     },
   ];
+  const [socialMedias, setSocialMedias] = useState<ISocialMedia[]>(
+    defaultSocialMediasValue
+  );
   const companiesSubOptions: ISubOptions[] = companies.map((company) => {
     return {
       href: `/empresas/${company.id}`,
@@ -269,6 +274,27 @@ const Header = () => {
       href: "#contato",
     },
   ];
+
+  useEffect(() => {
+    const { pathname } = location;
+
+    if (!pathname.includes("empresas"))
+      return setSocialMedias(defaultSocialMediasValue);
+
+    const companyId = pathname.split("/")[2];
+    const company = companies.find((company) => company.id === companyId);
+
+    if (!company || !company.customInstagram)
+      return setSocialMedias(defaultSocialMediasValue);
+
+    let newValue = defaultSocialMediasValue;
+    newValue[0] = {
+      ...newValue[0],
+      href: company.customInstagram!,
+    };
+
+    setSocialMedias(newValue);
+  }, [location]);
 
   return (
     <>

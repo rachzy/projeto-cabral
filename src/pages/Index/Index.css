@@ -4,7 +4,7 @@ div.inline-wrapper {
   display: flex;
   flex-wrap: wrap;
 
-  width: 86vw;
+  width: 82vw;
 
   justify-content: space-around;
   align-items: center;
@@ -14,44 +14,6 @@ div.inline-wrapper {
   div.inline-wrapper {
     margin-top: -5%;
   }
-}
-
-/* ABOUT-BOX */
-
-div.about-box {
-  display: flex;
-  flex-wrap: wrap;
-
-  background-color: #e5e6e7;
-
-  justify-content: space-between;
-
-  width: 100%;
-  padding-block: 3vh;
-  margin-top: 10vh;
-
-  border-radius: 1vh;
-
-  box-shadow: 0vh 0vh 2vh 1vh #b8b8b8;
-
-  overflow-wrap: normal;
-}
-
-@media screen and (max-width: 920px) {
-  div.about-box {
-    flex-direction: column;
-  }
-}
-
-div.about-box div {
-  flex: 1;
-  padding: 5vh;
-}
-
-div.about-box h2 {
-  color: rgb(95, 95, 95);
-  font-size: 4vh;
-  margin-bottom: 2vh;
 }
 
 /* BLUE BANNER   */

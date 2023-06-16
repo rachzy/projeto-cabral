@@ -17,12 +17,6 @@ import GasStationBuilding from "../../assets/images/companies/cabral-rodovia/bui
 
 import BlueBanner from "../../assets/images/other/frase-miolo.jpg";
 
-import InfoBox from "../../components/InfoBox/index";
-import ImageBackground from "../../components/ImageBackground";
-import Timeline, { ITimeline } from "../../components/Timeline";
-import LineTitle from "../../components/LineTitle";
-import { IService } from "../../components/Service";
-
 import AbastecimentoIcon from "../../assets/images/icons/services/abastecimento.png";
 import AutopecasIcon from "../../assets/images/icons/services/auto-pecas.png";
 import LavajatoIcon from "../../assets/images/icons/services/lavajato.png";
@@ -40,11 +34,20 @@ import WhatsappIcon from "../../assets/images/buttons/whatsapp-footer.png";
 import EmailIcon from "../../assets/images/buttons/e-mail-footer.png";
 
 import Services from "../../sections/Services";
-import { IContact } from "../../components/ContactBox";
 import Contact from "../../sections/Contact";
+
+import { IContact } from "../../components/ContactBox";
 import LogoSlider, { ILogoSlide } from "../../components/LogoSlider";
+import InfoBox from "../../components/InfoBox/index";
+import ImageBackground from "../../components/ImageBackground";
+import Timeline, { ITimeline } from "../../components/Timeline";
+import LineTitle from "../../components/LineTitle";
+import { IService } from "../../components/Service";
 
 import companies from "../../data/companies";
+import AboutBox from "../../components/AboutBox";
+
+import FormaDeTrabalhar from "../../assets/images/other/forma-de-trabalhar.png";
 
 const Index = () => {
   const sliderImages = [slide1, sliderBanner, slide2, slide3];
@@ -221,7 +224,7 @@ const Index = () => {
             style={{ color: "#0144b5", fontWeight: "bold" }}
           />
         </div>
-        <div className="about-box">
+        <AboutBox>
           <div>
             <h2>:. Forma de Trabalhar</h2>
             <p>
@@ -238,7 +241,15 @@ const Index = () => {
               operação eficiente.
             </p>
           </div>
-        </div>
+        </AboutBox>
+        <AboutBox column>
+          <div>
+            <h2>:. Forma de Trabalhar e Cultura Organizacional</h2>
+          </div>
+          <div className="image">
+            <img src={FormaDeTrabalhar} />
+          </div>
+        </AboutBox>
       </section>
       <section id="sobre">
         <h2 className="subtitle">:. Um pouco sobre nós</h2>

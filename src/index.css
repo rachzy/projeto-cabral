@@ -29,6 +29,10 @@
   background: #555;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 :root {
   overflow-x: hidden;

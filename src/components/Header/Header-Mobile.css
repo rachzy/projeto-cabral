@@ -44,6 +44,10 @@ header .mobile-menu {
   overflow-y: scroll;
 }
 
+header .mobile-menu img {
+  cursor: pointer;
+}
+
 header .mobile-background.active .mobile-menu {
   min-width: fit-content;
   max-width: 70%;
@@ -68,8 +72,13 @@ header .mobile-menu a {
   width: 0;
 }
 
-header .mobile-menu img {
+header .mobile-menu img.cabral-logo {
   width: 70%;
+}
+
+header .mobile-menu img.cabral-connect {
+  width: 10vh;
+  height: 5vh;
 }
 
 header .mobile-menu nav.options li {
@@ -96,9 +105,10 @@ header .mobile-menu ul.social-medias {
   width: 80%;
 
   justify-content: space-evenly;
+  align-items: center;
 }
 
-header .mobile-menu ul.social-medias img {
+header .mobile-menu ul.social-medias img.media-logo {
   width: 100%;
 }
 

@@ -241,6 +241,17 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
             />
             {renderSocialMedias()}{" "}
           </ul>
+          <img className="cabral-logo" src={Logo} onClick={handleOptionClick} alt="logo rede cabral" />
+          <nav className="options">
+            <ul className="options-list">{renderOptions()}</ul>
+          </nav>
+          <img
+          className="cabral-connect"
+            onClick={handleCabralConnectClick}
+            src={LogoCabralConnect}
+            alt="cabral connect"
+          />
+          <ul className="social-medias">{renderSocialMedias()}</ul>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import Logo from "../../assets/images/logos/rede-cabral-header-footer.png";
 import InstaHeader from "../../assets/images/buttons/insta-header.png";
 import WhatsappHeader from "../../assets/images/buttons/whatsapp-header.png";
 import EmailHeader from "../../assets/images/buttons/e-mail-header.png";
+import LogoCabralConnect from "../../assets/images/logos/logo-cabral-connect.png";
 
 import companies from "../../data/companies";
 
@@ -35,6 +36,10 @@ interface IOptions {
 interface IPropsSections {
   socialMedias: ISocialMedia[];
   options: IOptions[];
+}
+
+function handleCabralConnectClick() {
+  window.open("https://cabralconnect.prodtool.com/");
 }
 
 const DefaultSection: React.FC<IPropsSections> = ({
@@ -112,6 +117,11 @@ const DefaultSection: React.FC<IPropsSections> = ({
   return (
     <div className="default">
       <div className="social-media">
+        <img
+          onClick={handleCabralConnectClick}
+          src={LogoCabralConnect}
+          alt="cabral connect"
+        />
         <ul>{renderSocialMedias()}</ul>
       </div>
       <div className="menu">
@@ -212,10 +222,16 @@ const MobileSection: React.FC<IPropsSections> = ({ socialMedias, options }) => {
       />
       <div className="mobile-background" ref={menuRef}>
         <div className="mobile-menu">
-          <img src={Logo} onClick={handleOptionClick} alt="logo rede cabral" />
+          <img className="cabral-logo" src={Logo} onClick={handleOptionClick} alt="logo rede cabral" />
           <nav className="options">
             <ul className="options-list">{renderOptions()}</ul>
           </nav>
+          <img
+          className="cabral-connect"
+            onClick={handleCabralConnectClick}
+            src={LogoCabralConnect}
+            alt="cabral connect"
+          />
           <ul className="social-medias">{renderSocialMedias()}</ul>
         </div>
       </div>

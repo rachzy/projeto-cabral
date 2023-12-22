@@ -36,6 +36,15 @@ header div.social-media {
   width: 80%;
 }
 
+div.social-media img {
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+div.social-media img:hover {
+  transform: scale(1.1);
+}
+
 div.social-media ul {
   display: flex;
 }
